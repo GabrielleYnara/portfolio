@@ -67,11 +67,12 @@ h1 {
     color:#ececec;
     padding: 4em 3em; /* top&bottom left&right */
     margin: 5px;
-    border: 1px solid #062750; /* width style color */
+    border: 1px solid #052040; /* width style color */
     background-color: rgba(38, 65, 85, 0.3);
     font-size: 0.8em;
 }
 .show-items a.inactive{
+    border: 1px solid #1a1a1a; /* width style color */
     background-color: rgba(50, 50, 50, 0.4);
 }
 
