@@ -27,3 +27,6 @@ input, textarea, button {
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
 }
+label{
+    margin-top: 5px;
+}

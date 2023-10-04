@@ -24,23 +24,32 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </div>
-            <div class="contact-me col-sm offset-md-1">
+            <form class="contact-me col-sm offset-md-1 needs-validation" novalidate>
                 <h2>Send me a message</h2>
-                <label for="identity">Name</label>
-                <input type="text" id="identity" name="name" placeholder="First and Last name" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="example@email.com">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="10" placeholder="Write your message here"></textarea>
+                <label for="identity" class="form-label">Name</label>
+                <input type="text" id="identity" class="form-control" name="name" placeholder="First and Last name" required>
+                <div class="invalid-feedback">
+                    Put down your name, so I know who you are.
+                </div>
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-control" name="email" placeholder="example@email.com" required>
+                <div class="invalid-feedback">
+                    Add your email, so I can answer you.
+                </div>
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" class="form-control" rows="10" placeholder="Write your message here" required></textarea>
+                <div class="invalid-feedback">
+                    Don't forget your message.
+                </div>
                 <br>
                 <div class="d-grid gap-2 col-6 mx-auto">
-                    <button id="sendBtn" class="btn btn-outline-info">Send</button>
-            
+                    <button id="sendBtn" class="btn btn-outline-info" type="submit">Send</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
     <script src="./js/contact_me.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    </body>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>    
+</body>
 </html>
