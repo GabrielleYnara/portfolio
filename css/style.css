@@ -60,10 +60,10 @@ h1 {
 } */
 
 /* Projects showcase */
-/* .show-items {
+.show-items {
     display: flex;
     flex-wrap: wrap;
-} */
+}
 .show-items a {
     text-decoration: none;
     color:#ececec;
