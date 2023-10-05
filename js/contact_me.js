@@ -8,17 +8,15 @@ contactForm.addEventListener('submit', event => {
   if (contactForm.checkValidity() === false) {
     event.stopPropagation();
   } else {
-  // Send email
-  Email.send({
-    SecureToken : "33c98016-0416-476d-bf35-cf3c9f5e0ccf",
-    To : 'gabrielleynara@ymail.com',
-    From : document.querySelector("#email").value,
-    Subject : "Contact from Portfolio",
-    Body : document.querySelector("#message").value
-    }).then(
-      message => alert(message)
-    );
+    // Submits and reset the form
+    contactForm.submit();
+    contactForm.reset();
   }
   // Add the 'was-validated' class to display feedback
   contactForm.classList.add('was-validated');
 });
+/**
+ * Refenreces
+ * submit() - https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit
+ * reset() - https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset
+ */
