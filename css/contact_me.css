@@ -1,22 +1,3 @@
-/* @media (min-width: 920px) {
-    
-    #main-contact {
-        width: 900px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin:auto;
-        column-gap: 5em;
-    }
-    .contact-me{
-        width: 360px;
-    }
-}
-#main-contact {
-    display: flex;
-    flex-direction: column;
-    margin:auto;
-} */
-
 .contact-me {
     margin: auto;
 }
