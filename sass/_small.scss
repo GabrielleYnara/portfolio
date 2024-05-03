@@ -1,0 +1,26 @@
+/*---
+    Ensures consistent behavior of web pages across different browsers and devices 
+ ---*/
+/* Prevents text resizing on mobile browsers in WebKit and Microsoft engines */
+html {
+    -webkit-text-size-adjust: 100%; /* For WebKit browsers */
+    -ms-text-size-adjust: 100%; /* For Internet Explorer and Edge */
+}
+
+/* Applies the box-sizing border-box model to all elements. 
+    This model includes padding and border in the element's total width and height */
+* {
+    -moz-box-sizing: border-box; /* For old Firefox browsers (pre-Gecko 29) */
+    -webkit-box-sizing: border-box; /* For old WebKit browsers (Chrome <10 and Safari <5.1) */
+    box-sizing: border-box; /* Standard syntax, for current browsers */
+}
+
+/*---
+    Styling
+---*/
+body {
+    background: #001733;
+    color: #ececec;
+    font-family: 'Montserrat', sans-serif;
+    margin: 2em;
+}
