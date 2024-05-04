@@ -32,7 +32,7 @@ body {
     width: 1424px;
 }
 /* Floating icon links */
-body.blur > *:not(.external-link-icon.open) {
+body.blur > *:not(.external-link-icon.open) { /* affects body w/ class blur and not the open extended menu */
     filter: blur(5px);
 }
 .external-link-icon.open {
@@ -49,6 +49,7 @@ body.blur > *:not(.external-link-icon.open) {
     display: flex;
     flex-direction: column;
     align-items: center; // This centers the button and the icons vertically
+    transition: all .3s ease;
     button {
         background-color: $floatBtnColor;
         color: $textColor;
@@ -65,8 +66,13 @@ body.blur > *:not(.external-link-icon.open) {
         path {
             fill: $textColor
         }
+        &:hover {
+            box-shadow: 0 0 5px 2px rgba($accentColor2,.3)
+        }
     }
-    
+    &.open button { 
+        box-shadow: none;
+    }
     ul {
         display: none;
         flex-direction: column; // This ensures the icons stack vertically
@@ -93,8 +99,8 @@ body.blur > *:not(.external-link-icon.open) {
         flex-direction: column;
         align-items: center;
     }
-    
-}
+} //end - .external-link-icon
+
 
 
 /* Styling navigation bar */
