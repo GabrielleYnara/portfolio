@@ -18,9 +18,90 @@ html {
 /*---
     Styling
 ---*/
+.small-3{
+    width: 25%;
+}
 body {
-    background: #001733;
-    color: #ececec;
+    background: $backgroundColor;
+    color: $textColor;
     font-family: 'Montserrat', sans-serif;
-    margin: 2em;
+    font-size: 16px;
+    margin: 25px;
+}
+.limited {
+    width: 1424px;
+}
+/* Floating icon links */
+body.blur > *:not(.external-link-icon.open) {
+    filter: blur(5px);
+}
+.external-link-icon.open {
+    z-index: 1000;  // High z-index to ensure it's above other elements
+    border: 2px solid $textColor;
+    width: 33px;
+    height: 99px;
+    background-color: #ececec;
+    border-radius: 50px;
+}
+.external-link-icon {
+    position:absolute;
+    // margin: -10px 0 0 -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; // This centers the button and the icons vertically
+    button {
+        background-color: $floatBtnColor;
+        color: $textColor;
+        border-radius: 50px;
+        justify-content: center; // Center horizontally
+        align-items: center; // Center vertically
+        width: 29px; // Ensure the button is a circle
+        height: 29px; // Ensure the button is a circle
+        padding: 0 ;
+        border: none;
+        font-size: 25px;
+        font-weight: 1000;
+        cursor: pointer;
+        path {
+            fill: $textColor
+        }
+    }
+    
+    ul {
+        display: none;
+        flex-direction: column; // This ensures the icons stack vertically
+        align-items: center;
+        margin-left: -32px;
+    }
+    ul.open {
+        display: flex;
+        cursor: pointer;
+    }
+    li {
+        list-style: none;
+    }
+    .logo {
+        display: block;
+        // width: 25px;
+        // height: 25px;
+        margin-top: 5px;
+    }
+    .logo path {
+        fill: $floatBtnColor;
+    }
+    #floatIcons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+
+/* Styling navigation bar */
+nav {
+    text-align: right;
+    a{
+        text-decoration: none;
+        color: $secondaryColor;
+    }
 }
