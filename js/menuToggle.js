@@ -4,7 +4,7 @@ var floatBtn = document.getElementById("float_btn");
 
 expandableMenuBtn.addEventListener("click", () => {
     toggleMenu();
-
+    toggleBtnAriaLabel();
 });
 document.body.addEventListener("click", closeMenuOnClickOutside);
 
@@ -20,5 +20,15 @@ function closeMenuOnClickOutside(event) {
     // Check if the menu is open and the click is outside the menu
     if (floatBtn.classList.contains("open") && !floatBtn.contains(event.target)) {
         toggleMenu();
+    }
+}
+
+function toggleBtnAriaLabel() {
+    var open = "Open external links menu";
+    var close = "Close external links menu";
+    if (expandableMenuBtn.ariaLabel === open) {
+        expandableMenuBtn.ariaLabel = close;
+    } else {
+        expandableMenuBtn.ariaLabel = open;
     }
 }

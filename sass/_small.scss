@@ -39,7 +39,7 @@ body.blur > *:not(.external-link-icon.open) { /* affects body w/ class blur and 
     z-index: 1000;  // High z-index to ensure it's above other elements
     border: 2px solid $textColor;
     width: 33px;
-    height: 99px;
+    height: 106px;
     background-color: #ececec;
     border-radius: 50px;
 }
@@ -72,6 +72,9 @@ body.blur > *:not(.external-link-icon.open) { /* affects body w/ class blur and 
     }
     &.open button { 
         box-shadow: none;
+        &:hover {
+            background-color: $secondaryColor;
+        }
     }
     ul {
         display: none;
@@ -81,19 +84,24 @@ body.blur > *:not(.external-link-icon.open) { /* affects body w/ class blur and 
     }
     ul.open {
         display: flex;
-        cursor: pointer;
+        
     }
     li {
         list-style: none;
+        cursor: pointer;
+        &:hover {
+            .logo path {
+                fill: $secondaryColor;
+            }
+        }
     }
     .logo {
         display: block;
-        // width: 25px;
-        // height: 25px;
-        margin-top: 5px;
+        margin-top: 10px;
     }
     .logo path {
         fill: $floatBtnColor;
+        
     }
     #floatIcons {
         flex-direction: column;
