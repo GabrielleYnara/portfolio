@@ -1,13 +1,20 @@
 var body = document.querySelector("body");
 var expandableMenuBtn = document.getElementById("external-links-menu");
 var floatBtn = document.getElementById("float_btn");
-
+const lastMenuItem = document.getElementById("navigation").querySelector('a:first-of-type'); // Adjust selector as needed
+console.log(lastMenuItem);
 expandableMenuBtn.addEventListener("click", () => {
     toggleMenu();
     toggleBtnAriaLabel();
 });
 document.body.addEventListener("click", closeMenuOnClickOutside);
 
+// Close menu if tabbing out of the last menu item
+lastMenuItem.addEventListener('keyup', function(e) {
+    if (e.key === 'Tab' && !e.shiftKey) {
+        toggleMenu();
+    }
+});
 //toggle menu upon clicks
 function toggleMenu() {
     document.getElementById("floatIcons").classList.toggle("open");

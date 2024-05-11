@@ -11,5 +11,8 @@
 .external-link-icon {
     ul {
         display: flex;
+        li:not(:first-child){
+            margin-left: 1.5px;
+        }
     }
 }

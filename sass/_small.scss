@@ -45,10 +45,12 @@ body.blur > *:not(.external-link-icon.open) { /* affects body w/ class blur and 
     position:absolute;
     display: flex;
     flex-direction: column;
-    align-items: center; // This centers the button and the icons vertically
     transition: all .3s ease;
+    &:not(ul){
+        align-items: center; // This centers the button and the icons vertically
+    }
     button {
-        background-color: $floatBtnColor;
+        background-color: $accentColor;
         color: $textColor;
         border-radius: 50px;
         justify-content: center; // Center horizontally
@@ -70,18 +72,15 @@ body.blur > *:not(.external-link-icon.open) { /* affects body w/ class blur and 
     &.open button { 
         box-shadow: none;
         &:hover {
-            background-color: $secondaryColor;
+            background-color: $floatBtnColor;
         }
     }
     ul {
         display: none;
-        flex-direction: column; // This ensures the icons stack vertically
-        align-items: center;
-        margin-left: -32px;
+        margin-left: -31.6px;
     }
     ul.open {
         display: flex;
-        
     }
     li {
         list-style: none;
@@ -97,8 +96,7 @@ body.blur > *:not(.external-link-icon.open) { /* affects body w/ class blur and 
         // margin-top: 10px;
     }
     .logo path {
-        fill: $floatBtnColor;
-        
+        fill: $floatBtnColor; 
     }
     #floatIcons {
         flex-direction: column;
@@ -108,13 +106,17 @@ body.blur > *:not(.external-link-icon.open) { /* affects body w/ class blur and 
 /* END - Dtyling external links menu */
 
 
-
 /* Styling navigation bar */
 nav {
     text-align: right;
     a{
+        padding: 0 2px;
         text-decoration: none;
-        color: $secondaryColor;
+        color: $secondaryTextColor;
+        &.active {
+            border-bottom: solid 1px $secondaryTextColor;
+        }
     }
 }
+
 /* END - Styling navigation bar */
