@@ -120,9 +120,58 @@ nav {
 }
 /* END - Styling navigation bar */
 
-/* Styling Introduction */
+/* Styling Introduction section */
 .introduction {
+    h1 {
+        font-family: 'Roboto Slab', serif;
+    }
     p {
         text-align: justify;
+    }
+    margin-bottom: 2em;
+}
+
+/* Styling show case section */
+.showcase{
+    p a {
+        color: $secondaryTextColor;
+    }
+}
+.show-items {
+    display: flex;
+    flex-wrap: wrap;
+    a {
+        display: flex;
+        justify-content: center; /* Horizontally center content within each <a> */
+        text-align: center;
+        height: 8em;
+        margin-bottom: 20px;
+        text-decoration: none;
+        background-color: #8FA6C2;
+        font-size: 1.2em;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        &.inactive{
+            cursor:default;
+            pointer-events:none;
+            background-color: #4F6682;
+            color: #fff;
+        }
+        &:hover:not(.inactive){
+            box-shadow: 0 0 30px 0 rgba(81, 122, 154, 0.5);
+        }
+        .project-details {
+            display: none;
+        }
+    }
+}
+
+/* Styling quote */
+footer {
+    display: flex;
+}
+.quote {
+    color: #929292;
+    span {
+        font-style: italic;
     }
 }

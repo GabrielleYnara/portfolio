@@ -1,8 +1,8 @@
 var body = document.querySelector("body");
 var expandableMenuBtn = document.getElementById("external-links-menu");
 var floatBtn = document.getElementById("float_btn");
-const lastMenuItem = document.getElementById("navigation").querySelector('a:first-of-type'); // Adjust selector as needed
-console.log(lastMenuItem);
+const firstNavItem = document.getElementById("navigation").querySelector('a:first-of-type');
+
 expandableMenuBtn.addEventListener("click", () => {
     toggleMenu();
     toggleBtnAriaLabel();
@@ -10,7 +10,7 @@ expandableMenuBtn.addEventListener("click", () => {
 document.body.addEventListener("click", closeMenuOnClickOutside);
 
 // Close menu if tabbing out of the last menu item
-lastMenuItem.addEventListener('keyup', function(e) {
+firstNavItem.addEventListener('keyup', function(e) {
     if (e.key === 'Tab' && !e.shiftKey) {
         toggleMenu();
     }
