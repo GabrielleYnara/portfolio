@@ -168,10 +168,26 @@ nav {
 /* Styling quote */
 footer {
     display: flex;
+    
 }
 .quote {
+    margin-top: 5em;
     color: #929292;
     span {
         font-style: italic;
     }
 }
+
+/* Styling contact form */
+.contact-me {
+    margin: auto;
+    input, textarea, button {
+        padding: 2px;
+        border-radius: 5px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    label{
+        margin-top: 5px;
+    }
+}
+
