@@ -124,6 +124,7 @@ nav {
 .introduction {
     h1 {
         font-family: 'Roboto Slab', serif;
+        font-weight: 400;
     }
     p {
         text-align: justify;
@@ -132,11 +133,11 @@ nav {
 }
 
 /* Styling show case section */
-.showcase{
+// .showcase{
     p a {
         color: $secondaryTextColor;
     }
-}
+// }
 .show-items {
     display: flex;
     flex-wrap: wrap;
@@ -177,6 +178,36 @@ footer {
         font-style: italic;
     }
 }
+/* END - Styling quote */
+
+/* Styling Resume */
+.resume {
+    max-width: 1220px;
+    p {
+        line-height: 1.2em;
+        margin-bottom: 8px;
+    }
+    b {
+        font-family: "Roboto Slab", serif;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+    .education {
+        margin-top: 1em;
+        
+    }
+}
+.work{
+    margin-top: 13px;
+    p, ul {
+        line-height: 1.2em;
+        margin-bottom: 5px;
+    }
+}
+#skills:last-child{
+    margin-bottom: 50px;
+}
+/* END - Styling Resume */
 
 /* Styling contact form */
 .contact-me {

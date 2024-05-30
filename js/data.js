@@ -1,6 +1,6 @@
 const introPhrase = "Motivated full-stack developer with a strong aptitude for rapid learning and adaptability in fast-paced environments, seeking to learn and grow in every opportunity.";
 const skills = {
-    languages: ["Java", "JavaScript", "HTML", "CSS"],
+    languages: ["Java", "JavaScript", "TypeScript","HTML", "CSS", "SASS"],
     technologies: ["Bootstrap", "Angular", "React", "Node.js", 
         "Postgres", "Oracle", "MongoDB", "Design Patterns", "MVC Architecture", "Spring Boot",
         "Cucumber", "Mockito"],
@@ -9,7 +9,7 @@ const skills = {
 };
 const education = [
     {
-        instituition: "FATEC Mogi das Cruzes SP - Brazil",
+        institution: "FATEC Mogi das Cruzes SP - Brazil",
         degree: "Systems Analysis and Development Technologist degree",
         period: "07/2013 - 12/2017",
         project: "Control More",
@@ -25,8 +25,8 @@ const workExperience = [
     {
       role: "Junior Software Engineer",
       period: "01/2024 - present",
-      company: "Interapt",
-      location: "Louisville, KY (Partnered with CVS)",
+      company: "Interapt (Partnered with CVS)",
+      location: "Louisville, KY",
       experience: [
         "Earned early recognition for proactive problem-solving and adaptability, contributing significantly to the team shortly after joining.",
         "Delivered 10 user stories within the first two months, focusing on enhancing the website's accessibility. Showcasing rapid acclimatization and technical proficiency."
