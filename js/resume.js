@@ -36,7 +36,7 @@ function addSkillCategory(label, content) {
 
 function addEducation(education){
     let div = document.createElement("div");
-    div.classList.add("education");
+    div.classList.add("degree");
     let row = document.createElement("div");
     let p = document.createElement("p");
     let label = document.createElement("b");
@@ -109,6 +109,7 @@ function addWorkExperience(work){
 
     p = document.createElement("p");
     p.innerHTML = work.company + " | " + work.location;
+
     div.append(p);
 
     let ul = document.createElement("ul");

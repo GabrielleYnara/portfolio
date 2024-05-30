@@ -2,10 +2,10 @@ const introPhrase = "Motivated full-stack developer with a strong aptitude for r
 const skills = {
     languages: ["Java", "JavaScript", "TypeScript","HTML", "CSS", "SASS"],
     technologies: ["Bootstrap", "Angular", "React", "Node.js", 
-        "Postgres", "Oracle", "MongoDB", "Design Patterns", "MVC Architecture", "Spring Boot",
+        "PostgreSQL", "Oracle", "MongoDB", "Design Patterns", "MVC Architecture", "Spring Boot",
         "Cucumber", "Mockito"],
     humanSkills: ["Flexibility", "Team Collaboration", "Intercultural Communication", "Problem-Solving"],
-    certifications: ["Full Stack Web & Mobile Development (2020) - Nucamp", "Salesforce Administrator (2021), Salesforce Platform App Builder (2021)", "Software Engineering Immersive (2023) - General Assembly"]
+    certifications: ["Software Engineering Immersive (2023) - General Assembly", "Salesforce Platform App Builder (2021)", "Salesforce Administrator (2021)", "Full Stack Web & Mobile Development (2020) - Nucamp"]
 };
 const education = [
     {
