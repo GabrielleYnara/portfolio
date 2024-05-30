@@ -1,0 +1,223 @@
+/*---
+    Ensures consistent behavior of web pages across different browsers and devices 
+ ---*/
+/* Prevents text resizing on mobile browsers in WebKit and Microsoft engines */
+html {
+    -webkit-text-size-adjust: 100%; /* For WebKit browsers */
+    -ms-text-size-adjust: 100%; /* For Internet Explorer and Edge */
+}
+
+/* Applies the box-sizing border-box model to all elements. 
+    This model includes padding and border in the element's total width and height */
+* {
+    -moz-box-sizing: border-box; /* For old Firefox browsers (pre-Gecko 29) */
+    -webkit-box-sizing: border-box; /* For old WebKit browsers (Chrome <10 and Safari <5.1) */
+    box-sizing: border-box; /* Standard syntax, for current browsers */
+}
+
+/*---
+    Styling
+---*/
+.small-3{
+    width: 25%;
+}
+body {
+    background: $backgroundColor;
+    color: $textColor;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin: 25px;
+}
+
+/* Styling external links menu  */
+body.blur > *:not(.external-link-icon.open) { /* affects body w/ class blur and not the open extended menu */
+    filter: blur(5px);
+}
+.external-link-icon.open {
+    z-index: 1000;  // High z-index to ensure it's above other elements
+    border: 2px solid $textColor;
+    width: 33px;
+    height: 109px;
+    background-color: #ececec;
+    border-radius: 50px;
+}
+.external-link-icon {
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    transition: all .3s ease;
+    &:not(ul){
+        align-items: center; // This centers the button and the icons vertically
+    }
+    button {
+        background-color: $accentColor;
+        color: $textColor;
+        border-radius: 50px;
+        justify-content: center; // Center horizontally
+        align-items: center; // Center vertically
+        width: 29px; // Ensure the button is a circle
+        height: 29px; // Ensure the button is a circle
+        padding: 0 ;
+        border: none;
+        font-size: 25px;
+        font-weight: 1000;
+        cursor: pointer;
+        path {
+            fill: $textColor
+        }
+        &:hover {
+            box-shadow: 0 0 5px 2px rgba($accentColor2,.3);
+        }
+    } // end - button
+    &.open button { 
+        box-shadow: none;
+        &:hover {
+            background-color: $floatBtnColor;
+        }
+    }
+    ul {
+        display: none;
+        margin-left: -31.6px;
+    }
+    ul.open {
+        display: flex;
+    }
+    li {
+        list-style: none;
+        cursor: pointer;
+        &:hover {
+            .logo path {
+                fill: $secondaryColor;
+            }
+        }
+    }
+    .logo {
+        display: block;
+        // margin-top: 10px;
+    }
+    .logo path {
+        fill: $floatBtnColor; 
+    }
+    #floatIcons {
+        flex-direction: column;
+        align-items: center;
+    }
+} //end - .external-link-icon
+/* END - Dtyling external links menu */
+
+
+/* Styling navigation bar */
+nav {
+    text-align: right;
+    a{
+        padding: 0 2px;
+        text-decoration: none;
+        color: $secondaryTextColor;
+        &.active {
+            border-bottom: solid 1px $secondaryTextColor;
+        }
+    }
+}
+/* END - Styling navigation bar */
+
+/* Styling Introduction section */
+.introduction {
+    h1 {
+        font-family: 'Roboto Slab', serif;
+        font-weight: 400;
+    }
+    p {
+        text-align: justify;
+    }
+    margin-bottom: 2em;
+}
+
+/* Styling show case section */
+// .showcase{
+    p a {
+        color: $secondaryTextColor;
+    }
+// }
+.show-items {
+    display: flex;
+    flex-wrap: wrap;
+    a {
+        display: flex;
+        justify-content: center; /* Horizontally center content within each <a> */
+        text-align: center;
+        height: 8em;
+        margin-bottom: 20px;
+        text-decoration: none;
+        background-color: #8FA6C2;
+        font-size: 1.2em;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        &.inactive{
+            cursor:default;
+            pointer-events:none;
+            background-color: #4F6682;
+            color: #fff;
+        }
+        &:hover:not(.inactive){
+            box-shadow: 0 0 30px 0 rgba(81, 122, 154, 0.5);
+        }
+        .project-details {
+            display: none;
+        }
+    }
+}
+
+/* Styling quote */
+footer {
+    display: flex;
+    
+}
+.quote {
+    margin-top: 5em;
+    color: #929292;
+    span {
+        font-style: italic;
+    }
+}
+/* END - Styling quote */
+
+/* Styling Resume */
+.resume {
+    p, ul {
+        line-height: 1.3em;
+        margin-bottom: 8px;
+    }
+    b {
+        font-family: "Roboto Slab", serif;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+    .degree {
+        margin-bottom: 20px;
+    }
+    #skills{
+        p {
+            // text-align: justify;
+        }
+    }
+}
+.work{
+    margin-bottom: 13px;
+    p, ul {
+        margin-bottom: 5px;
+    }
+}
+/* END - Styling Resume */
+
+/* Styling contact form */
+.contact-me {
+    margin: auto;
+    input, textarea, button {
+        padding: 2px;
+        border-radius: 5px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    label{
+        margin-top: 5px;
+    }
+}
+

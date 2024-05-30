@@ -14,7 +14,8 @@ contactForm.addEventListener('submit', event => {
     event.stopPropagation();
   } else {
     // Submits the form
-    contactForm.submit();
+    contactForm.smit();
+    // console.log("Form submitted!")
   }
   // Add the 'was-validated' class to display feedback
   contactForm.classList.add('was-validated');
