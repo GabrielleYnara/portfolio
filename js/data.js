@@ -1,7 +1,7 @@
 const introPhrase = "Motivated full-stack developer with a strong aptitude for rapid learning and adaptability in fast-paced environments, seeking to learn and grow in every opportunity.";
 const skills = {
-    languages: ["Java", "JavaScript", "TypeScript","HTML", "CSS", "SASS"],
-    technologies: ["Bootstrap", "Angular", "React", "Node.js", 
+    languages: ["Java", "JavaScript", "TypeScript","HTML", "CSS"],
+    technologies: ["SASS", "Bootstrap", "Angular", "React", "Node.js", 
         "PostgreSQL", "Oracle", "MongoDB", "Design Patterns", "MVC Architecture", "Spring Boot",
         "Cucumber", "Mockito"],
     humanSkills: ["Flexibility", "Team Collaboration", "Intercultural Communication", "Problem-Solving"],
