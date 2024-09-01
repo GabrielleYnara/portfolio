@@ -36,8 +36,8 @@ body.blur > *:not(.external-link-icon.open) { /* affects body w/ class blur and 
 .external-link-icon.open {
     z-index: 1000;  // High z-index to ensure it's above other elements
     border: 2px solid $textColor;
-    width: 33px;
-    height: 109px;
+    width: 46px;
+    height: 140px;
     background-color: #ececec;
     border-radius: 50px;
 }
@@ -55,8 +55,8 @@ body.blur > *:not(.external-link-icon.open) { /* affects body w/ class blur and 
         border-radius: 50px;
         justify-content: center; // Center horizontally
         align-items: center; // Center vertically
-        width: 29px; // Ensure the button is a circle
-        height: 29px; // Ensure the button is a circle
+        width: 44px; // Ensure the button is a circle
+        height: 44px; // Ensure the button is a circle
         padding: 0 ;
         border: none;
         font-size: 25px;
@@ -93,7 +93,7 @@ body.blur > *:not(.external-link-icon.open) { /* affects body w/ class blur and 
     }
     .logo {
         display: block;
-        // margin-top: 10px;
+        margin-top: 10px;
     }
     .logo path {
         fill: $floatBtnColor; 
@@ -183,10 +183,10 @@ footer {
 /* Styling Resume */
 .resume {
     p, ul {
-        line-height: 1.3em;
         margin-bottom: 8px;
     }
     b {
+        font-size: 18px;
         font-family: "Roboto Slab", serif;
         font-weight: 600;
         letter-spacing: 0.5px;
