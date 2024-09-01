@@ -120,6 +120,7 @@ nav {
 }
 /* END - Styling navigation bar */
 
+/*--------------------- Styling Home Page ---------------------*/
 /* Styling Introduction section */
 .introduction {
     h1 {
@@ -180,7 +181,7 @@ footer {
 }
 /* END - Styling quote */
 
-/* Styling Resume */
+/*--------------------- Styling Resume ---------------------*/
 .resume {
     p, ul {
         margin-bottom: 8px;
@@ -198,6 +199,9 @@ footer {
         p {
             // text-align: justify;
         }
+    }
+    h2 {
+        font-size: 24px;
     }
 }
 .work{
