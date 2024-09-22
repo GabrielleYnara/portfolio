@@ -41,21 +41,3 @@ function removeActive(element) {
     element.classList.remove("active");
     element.removeAttribute("aria-current");
 }
-
-let currentLocation = location.pathname.split('/').pop(); // retrieves the last part of the path name
-const navBtn = document.getElementById("navBtn");
-let navItems = document.querySelectorAll("#navigation-items li");
-let closeBtn = document.getElementById("closeBtn");
-
-// Runs through menu items and mark the current page as active
-navItems.forEach( (item) => {
-    if (item.children[0].href.split('/').pop() === currentLocation) {
-        activePage(item);
-    } else {
-        removeActive(item);
-    }
-});
-
-
-navBtn.addEventListener("click", toggleNavMenu);
-closeBtn.addEventListener("click", toggleNavMenu);
