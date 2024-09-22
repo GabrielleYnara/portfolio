@@ -195,13 +195,10 @@ footer {
     h3 {
         font-size: 24px;
     }
-    span {
-        &.text-end{
-            user-select: none;
-            -webkit-user-select: none; /* Safari */
-            text-decoration: none;
-            color: $textColor;
-        }
+    a[href^="tel"] {
+        pointer-events: none;
+        text-decoration: none;
+        color: inherit; /* Ensure the link looks like normal text */
     }
 }
 .work{
