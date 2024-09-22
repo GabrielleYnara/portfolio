@@ -195,10 +195,11 @@ footer {
     h3 {
         font-size: 24px;
     }
-    .text-end {
-        text-decoration: none;
-        color: $textColor;
+    .col-xs-12.col-sm-4.text-end { // prevents tel link
+        -webkit-touch-callout: none; 
+        -webkit-user-select: none;
     }
+    
 }
 .work{
     margin-bottom: 13px;
