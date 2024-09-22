@@ -58,6 +58,18 @@ body.blur > *:not(header-component){
     path {
         fill: $darkSecondaryTextColor;
     }
+    &:hover {
+        path {
+            fill: $accentColor2;
+        }
+    }
+}
+#closeBtn {
+    &:hover {
+        path {
+            stroke: $accentColor2;
+        }
+    }
 }
 #navigation-items{ //hide navigation items
     display: none;
