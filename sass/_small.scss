@@ -27,100 +27,98 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     margin: 25px;
+    line-height: 1.5;
 }
 
+/*----------------------------- Navigation -----------------------------*/
 /* Styling external links menu  */
-body.blur > *:not(.external-link-icon.open) { /* affects body w/ class blur and not the open extended menu */
-    filter: blur(5px);
-}
-.external-link-icon.open {
-    z-index: 1000;  // High z-index to ensure it's above other elements
-    border: 2px solid $textColor;
-    width: 46px;
-    height: 140px;
-    background-color: #ececec;
-    border-radius: 50px;
-}
-.external-link-icon {
-    position:absolute;
+main.blur { /* affects body w/ class blur and not the open extended menu */
+    filter: blur(20px);
+} //TODO - Fix menu background
+
+/*----------------------------- Styling navigation  */
+#BtnsContainer {
     display: flex;
-    flex-direction: column;
-    transition: all .3s ease;
-    &:not(ul){
-        align-items: center; // This centers the button and the icons vertically
+    justify-content: flex-end; /* Pushes the button to the right */
+    align-items: center;       /* Aligns it vertically in the container */
+}
+/* Removes standard button characteristics */
+#navBtn, #closeBtn { // open and close menu buttons
+    background: transparent;   
+    border: none; 
+    padding: 0;  
+    margin: 0;  
+    box-shadow: none; 
+    appearance: none;   /* Removes default appearance on some browsers */
+    cursor: pointer;    /* Ensures the pointer shows on hover */
+    width: 44px;
+    height: 44px;
+}
+#navBtn {
+    path {
+        fill: $darkSecondaryTextColor;
     }
-    button {
-        background-color: $accentColor;
-        color: $textColor;
-        border-radius: 50px;
-        justify-content: center; // Center horizontally
-        align-items: center; // Center vertically
-        width: 44px; // Ensure the button is a circle
-        height: 44px; // Ensure the button is a circle
-        padding: 0 ;
-        border: none;
-        font-size: 25px;
-        font-weight: 1000;
-        cursor: pointer;
+}
+#navigation-items{ //hide navigation items
+    display: none;
+}
+#navigation-items.open{ // expand menu items
+    z-index: 1000; /* Ensure it's above the blurred main content */
+    position:absolute;
+    width: 90%;
+    height: 225px;
+    background-color: $darkBackground;
+    display: inline-block;
+    list-style: none;
+    padding-top:20px;
+    line-height: 34px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.702);
+    a {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: $darkSecondaryTextColor;
+    }
+    li.active { /* Styling active menu link */
+        // border-bottom: solid 1px $secondaryTextColor;
+        background-color: $darkAccentColor;
+        margin-left: -32px;
+        padding-left: 30px;padding: -20px;
+        a {
+            font-weight: 900;
+            color: $darkActiveTextColor;
+        }
+    }
+    li a:hover {
+        font-size:large;
+        font-weight: 900;
+        color: $accentColor2;               /* Change text color on hover */
         path {
-            fill: $textColor
-        }
-        &:hover {
-            box-shadow: 0 0 5px 2px rgba($accentColor2,.3);
-        }
-    } // end - button
-    &.open button { 
-        box-shadow: none;
-        &:hover {
-            background-color: $floatBtnColor;
+            fill: $accentColor2;
         }
     }
-    ul {
-        display: none;
-        margin-left: -31.6px;
+    path {
+        fill: $secondaryTextColor;
     }
-    ul.open {
-        display: flex;
-    }
-    li {
-        list-style: none;
-        cursor: pointer;
-        &:hover {
-            .logo path {
-                fill: $secondaryColor;
-            }
-        }
+    hr {
+        margin: 10px 0;
+        width: 95%;
     }
     .logo {
-        display: block;
-        margin-top: 10px;
-    }
-    .logo path {
-        fill: $floatBtnColor; 
-    }
-    #floatIcons {
-        flex-direction: column;
-        align-items: center;
-    }
-} //end - .external-link-icon
-/* END - Dtyling external links menu */
-
-
-/* Styling navigation bar */
-nav {
-    text-align: right;
-    a{
-        padding: 0 2px;
-        text-decoration: none;
-        color: $secondaryTextColor;
-        &.active {
-            border-bottom: solid 1px $secondaryTextColor;
-        }
+        margin: 4px 5px 7px 0px;
     }
 }
-/* END - Styling navigation bar */
-
-/*--------------------- Styling Home Page ---------------------*/
+nav {
+    margin: 0px auto;
+    display: flex;
+    justify-content: flex-end; /* Pushes the button to the right */
+    // align-items: center;       /* Aligns it vertically in the container */
+}
+/* END - Styling navigation */
+main {
+    margin-top: 20px;
+}
+/*----------------------------- Home Page -----------------------------*/
 /* Styling Introduction section */
 .introduction {
     h1 {
@@ -170,10 +168,9 @@ nav {
 /* Styling quote */
 footer {
     display: flex;
-    
 }
 .quote {
-    margin-top: 5em;
+    margin-top: 4em;
     color: #929292;
     span {
         font-style: italic;
@@ -181,7 +178,7 @@ footer {
 }
 /* END - Styling quote */
 
-/*--------------------- Styling Resume ---------------------*/
+/*----------------------------- Resume Page -----------------------------*/
 .resume {
     p, ul {
         margin-bottom: 8px;
@@ -195,12 +192,7 @@ footer {
     .degree {
         margin-bottom: 20px;
     }
-    #skills{
-        p {
-            // text-align: justify;
-        }
-    }
-    h2 {
+    h3 {
         font-size: 24px;
     }
 }
@@ -212,6 +204,7 @@ footer {
 }
 /* END - Styling Resume */
 
+/*----------------------------- Contact Page -----------------------------*/
 /* Styling contact form */
 .contact-me {
     margin: auto;

@@ -9,7 +9,6 @@ addEducation(education[0]);
 
 let experienceDiv = document.getElementById("experience");
 for (let i = 0; i < workExperience.length; i++){
-    console.log(workExperience[i])
     addWorkExperience(workExperience[i]);
 }
 
