@@ -23,7 +23,7 @@ class Header extends HTMLElement {
                 </div>
                 <nav>
                     <ul id="navigation-items">
-                        <li>
+                        <li class="active">
                             <a href="index.html">Home</a>
                         </li>
                         <li>
