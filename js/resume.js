@@ -98,12 +98,12 @@ function addWorkExperience(work){
     p.append(label);
     row.append(p);
 
-    p = document.createElement("p");
-    p.classList.add("col-xs-12");
-    p.classList.add("col-sm-4");
-    p.classList.add("text-end")
-    p.innerHTML = work.period;
-    row.append(p);
+    span = document.createElement("span");
+    span.classList.add("col-xs-12");
+    span.classList.add("col-sm-4");
+    span.classList.add("text-end")
+    span.innerHTML = work.period;
+    row.append(span);
     div.append(row);
 
     p = document.createElement("p");

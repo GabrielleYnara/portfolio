@@ -195,7 +195,12 @@ footer {
     h3 {
         font-size: 24px;
     }
-    
+    span {
+        &.text-end{
+            user-select: none;
+            -webkit-user-select: none; /* Safari */
+        }
+    }
 }
 .work{
     margin-bottom: 13px;
