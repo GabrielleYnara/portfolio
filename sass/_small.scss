@@ -32,9 +32,9 @@ body {
 
 /*----------------------------- Navigation -----------------------------*/
 /* Styling external links menu  */
-main.blur { /* affects body w/ class blur and not the open extended menu */
+body.blur > *:not(header){ 
     filter: blur(20px);
-} //TODO - Fix menu background
+}
 
 /*----------------------------- Styling navigation  */
 #BtnsContainer {
@@ -66,12 +66,12 @@ main.blur { /* affects body w/ class blur and not the open extended menu */
     z-index: 1000; /* Ensure it's above the blurred main content */
     position:absolute;
     width: 90%;
-    height: 225px;
+    height: 245px;
     background-color: $darkBackground;
     display: inline-block;
     list-style: none;
     padding-top:20px;
-    line-height: 34px;
+    line-height: 38px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.702);
     a {
         display: block;
@@ -113,6 +113,9 @@ nav {
     display: flex;
     justify-content: flex-end; /* Pushes the button to the right */
     // align-items: center;       /* Aligns it vertically in the container */
+}
+.external-links {
+    z-index: 1000;
 }
 /* END - Styling navigation */
 main {

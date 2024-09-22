@@ -34,14 +34,27 @@ nav{
             fill: $accentColor2;
         }
     }
+    li.active {
+        font-weight: 900;
+        a {
+            color: $accentColor2;               /* Change text color on hover */
+        }
+    }
 }
 /* Position the icons at the bottom-right corner of the screen */
-.external-link {
-    position: fixed;
-    bottom: 20px;
+.external-links {
+
     right: 2px;
     display: flex;
-    flex-direction: column; /* Align vertically */
+    flex-direction: row; /* Align vertically */
+}
+#linkedin {
+    position: fixed;
+    bottom: 70px;
+}
+#github{
+    position: fixed;
+    bottom: 20px;
 }
 .visibility {
     display: none;
