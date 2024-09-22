@@ -121,3 +121,9 @@ function addWorkExperience(work){
     experienceDiv.append(div);
 
 }
+
+if (navigator.userAgent.match(/iPhone|iPad|Android/i)) {
+    document.querySelectorAll('a[href^="tel"]').forEach(function(link) {
+        link.removeAttribute('href');
+    });
+}

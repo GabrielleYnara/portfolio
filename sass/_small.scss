@@ -199,6 +199,8 @@ footer {
         &.text-end{
             user-select: none;
             -webkit-user-select: none; /* Safari */
+            text-decoration: none;
+            color: $textColor;
         }
     }
 }
