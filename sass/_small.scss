@@ -179,7 +179,7 @@ main {
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         &.inactive{
             cursor:none;
-            pointer-events:none;
+            pointer-events: none;
             background-color: #4F6682;
             color: #fff;
         }
