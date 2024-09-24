@@ -37,6 +37,17 @@ body.blur > *:not(header-component){
 }
 
 /*----------------------------- Styling navigation  */
+#LangSwitcher {
+    float:left;
+    margin-top: -5px;
+    a {
+        color: $secondaryColor;
+        &:hover {
+            font-weight: 900;
+            color: $accentColor2;  
+        }
+    }
+}
 #BtnsContainer {
     display: flex;
     justify-content: flex-end; /* Pushes the button to the right */

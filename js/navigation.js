@@ -41,3 +41,49 @@ function removeActive(element) {
     element.classList.remove("active");
     element.removeAttribute("aria-current");
 }
+
+// loads the file
+function loadLanguage(lang) {
+    if (!document.getElementById(`${lang}-script`)){ //prevents reloading the script
+        let script = document.createElement("script");
+        let file = lang === "pt" ? "portuguese" : "english";
+        script.src = `js/${file}.js`;
+        script.id = `${lang}-script`; // to track if it has been loaded
+        script.onload = () => switchLanguage(lang);
+        document.body.append(script);
+    } else {
+        switchLanguage(lang);
+    }
+}
+
+// replace elements with value in key stored on files
+function switchLanguage(lang) {
+    const elements = document.querySelectorAll("[data-translate]");
+    const translations = lang === "en" ? en : pt; 
+    console.log("loading translated content");
+    elements.forEach (el => {
+        const key = el.getAttribute("data-translate");
+        el.textContent = translations[key];
+        console.log(el);
+        console.log(key);
+    });
+}
+
+function toggleLanguageOption(event){
+    console.log("-------- START:: toggleLanguageOption")
+    let lang = event.target.id;
+    console.log(lang);
+    lang = lang === "portuguese" ? "pt" : "en"; 
+    console.log(lang);
+    document.querySelector("[lang]").setAttribute("lang", lang);
+    event.target.setAttribute("hidden", "true");
+    if (lang == "pt") {
+        console.log("Activate Portuguese");
+        document.getElementById("english").removeAttribute("hidden");
+        
+    } else {
+        console.log("Activate English");
+        document.getElementById("portuguese").removeAttribute("hidden");
+    }
+    loadLanguage(lang);
+}

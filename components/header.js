@@ -7,6 +7,10 @@ class Header extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <header>
+                <div id="LangSwitcher">
+                    <a href="#" id="portuguese" lang="pt">Português</a>
+                    <a href="#" id="english" hidden="true" lang="en">English</a>
+                </div>
                 <div id="BtnsContainer">
                     <button id="navBtn" aria-label="Expand menu">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> 
@@ -23,14 +27,14 @@ class Header extends HTMLElement {
                 </div>
                 <nav>
                     <ul id="navigation-items">
-                        <li class="active">
-                            <a href="index.html">Home</a>
+                        <li class="active" aria-current="page">
+                            <a href="index.html" data-translate="home">Home</a>
                         </li>
                         <li>
-                            <a href="resume.html">Resume</a>
+                            <a href="resume.html" data-translate="resume">Resume</a>
                         </li>
                         <li>
-                            <a href="contact.html">Contact</a>
+                            <a href="contact.html" data-translate="contact">Contact</a>
                         </li>
                         <hr aria-hidden="true">
                         <li class="external-links" id="linkedin">
@@ -55,11 +59,15 @@ class Header extends HTMLElement {
         `;
         const navBtn = this.querySelector("#navBtn");
         const closeBtn = this.querySelector("#closeBtn");
+        const languageSwitcher = document.getElementById("LangSwitcher");
         let currentLocation = location.pathname.split('/').pop(); // retrieves the last part of the path name
         let navItems = document.querySelectorAll("#navigation-items li");
 
         navBtn.addEventListener("click", toggleNavMenu);
         closeBtn.addEventListener("click", toggleNavMenu);
+        languageSwitcher.childNodes.forEach((item) => {
+            item.addEventListener("click", toggleLanguageOption);
+        });
 
         // Runs through menu items and mark the current page as active
         navItems.forEach( (item) => {
