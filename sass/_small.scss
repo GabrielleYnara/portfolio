@@ -37,6 +37,18 @@ body.blur > *:not(header-component){
 }
 
 /*----------------------------- Styling navigation  */
+#LangSwitcher {
+    float:left;
+    margin-top: -5px;
+    a {
+        font-size: 13px;
+        color: $secondaryColor;
+        &:hover {
+            font-weight: 900;
+            color: $accentColor2;  
+        }
+    }
+}
 #BtnsContainer {
     display: flex;
     justify-content: flex-end; /* Pushes the button to the right */
@@ -166,7 +178,7 @@ main {
         font-size: 1.2em;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         &.inactive{
-            cursor:default;
+            cursor:none;
             pointer-events:none;
             background-color: #4F6682;
             color: #fff;
@@ -187,8 +199,11 @@ footer {
 .quote {
     margin-top: 4em;
     color: #929292;
-    span {
+    span:nth-child(2){
         font-style: italic;
+    }
+    span {
+        display: block;
     }
 }
 /* END - Styling quote */
