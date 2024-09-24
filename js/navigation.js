@@ -44,15 +44,26 @@ function removeActive(element) {
 
 // loads the file
 function loadLanguage(lang) {
+    console.log("loadLanguage " );
+    console.log(lang);
     if (!document.getElementById(`${lang}-script`)){ //prevents reloading the script
         let script = document.createElement("script");
         let file = lang === "pt" ? "portuguese" : "english";
         script.src = `js/${file}.js`;
         script.id = `${lang}-script`; // to track if it has been loaded
-        script.onload = () => switchLanguage(lang);
         document.body.append(script);
+        script.onload = () => {
+            switchLanguage(lang);
+            // Dispatch custom event to inform home.js of language change
+            const langChangeEvent = new CustomEvent("languageChange", { detail: lang });
+            document.dispatchEvent(langChangeEvent); // Dispatch event
+        }
+        
     } else {
         switchLanguage(lang);
+        // Dispatch custom event to inform home.js of language change
+        const langChangeEvent = new CustomEvent("languageChange", { detail: lang });
+        document.dispatchEvent(langChangeEvent); // Dispatch event
     }
 }
 
@@ -60,30 +71,35 @@ function loadLanguage(lang) {
 function switchLanguage(lang) {
     const elements = document.querySelectorAll("[data-translate]");
     const translations = lang === "en" ? en : pt; 
-    console.log("loading translated content");
+
+    // Save the selected language and translations in local storage
+    localStorage.setItem("selectedLanguage", lang); 
+    // Convert the object into JSON, since localStorage accepts only string 
+    localStorage.setItem("translations", JSON.stringify(translations));
     elements.forEach (el => {
         const key = el.getAttribute("data-translate");
-        el.textContent = translations[key];
-        console.log(el);
-        console.log(key);
+        if (key === "showcase_description") {
+            el.innerHTML = translations[key];
+        } else {
+            el.textContent = translations[key];
+        }
+        
     });
 }
 
 function toggleLanguageOption(event){
-    console.log("-------- START:: toggleLanguageOption")
-    let lang = event.target.id;
-    console.log(lang);
-    lang = lang === "portuguese" ? "pt" : "en"; 
-    console.log(lang);
-    document.querySelector("[lang]").setAttribute("lang", lang);
+    let lang = event.target.id === "portuguese" ? "pt" : "en"; 
+
+    //toggle visibility of language options
     event.target.setAttribute("hidden", "true");
     if (lang == "pt") {
-        console.log("Activate Portuguese");
         document.getElementById("english").removeAttribute("hidden");
         
     } else {
-        console.log("Activate English");
         document.getElementById("portuguese").removeAttribute("hidden");
     }
+
+    // Set the language attribute and load the translation
+    document.querySelector("[lang]").setAttribute("lang", lang);
     loadLanguage(lang);
 }
