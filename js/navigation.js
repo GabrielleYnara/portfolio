@@ -44,8 +44,6 @@ function removeActive(element) {
 
 // loads the file
 function loadLanguage(lang) {
-    console.log("loadLanguage " );
-    console.log(lang);
     if (!document.getElementById(`${lang}-script`)){ //prevents reloading the script
         let script = document.createElement("script");
         let file = lang === "pt" ? "portuguese" : "english";

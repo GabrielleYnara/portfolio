@@ -9,8 +9,6 @@ function generateProjects() {
     const translations = JSON.parse(localStorage.getItem("translations"));
     const projectContainer = document.querySelector(".show-items");
     projectContainer.innerHTML = ""; // Clear existing projects
-    console.log("GenerateProjects");
-    console.log(translations);
     translations.projects.forEach((project) => {
         let inactive = project.inactive === true ? 'inactive' : '';
         let aria_disabled = project.inactive === true ? 'aria-disabled="true" tabindex="-1"' : '';

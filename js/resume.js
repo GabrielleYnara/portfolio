@@ -1,16 +1,38 @@
+// Listen for the custom languageChange event
+document.addEventListener("languageChange", (event) => {
+    console.log("Language changed to:", event.detail);
+    // generateProjects(); // Call generateProjects when the language changes
+    generateResume();
+});
 let skillsDiv = document.getElementById("skills");
-addSkillCategory("Languages: ", stringuify(skills.languages));
-addSkillCategory("Technologies: ", stringuify(skills.technologies));
-addSkillCategory("Human Skills: ", stringuify(skills.humanSkills));
-addSkillCategory("Certifications: ", stringuify(skills.certifications));
-
 let educationDiv = document.getElementById("education");
-addEducation(education[0]);
-
 let experienceDiv = document.getElementById("experience");
-for (let i = 0; i < workExperience.length; i++){
-    addWorkExperience(workExperience[i]);
+
+function generateResume() {
+    console.log("Loading resume.js");
+
+    // Converts string back into object
+    const translations = JSON.parse(localStorage.getItem("translations"));
+    // Reset the page
+    const paragraphs = skillsDiv.querySelectorAll("p");
+    const workDivs = experienceDiv.querySelectorAll("[class='work']");
+    const educationDivs = educationDiv.querySelectorAll("[class='degree']");
+    // Loop through each element and remove it
+    paragraphs.forEach((p) => p.remove());    
+    workDivs.forEach((div) => div.remove());
+    educationDivs.forEach((div) => div.remove());
+
+    translations.skills.forEach((skill) => {
+        addSkillCategory(`${skill.category}: `,stringuify(skill.items));
+    });
+    translations.education.forEach((education) => {
+        addEducation(education);
+    });
+    translations.work_experience.forEach((experience) => {
+        addWorkExperience(experience);
+    });
 }
+
 
 function stringuify(array){
     let txtResult = "";
@@ -61,7 +83,7 @@ function addEducation(education){
     if (education.project) { // project-related
         p = document.createElement("p");
         label = document.createElement("b");
-        label.innerHTML = "Project: " + education.project + " ";
+        label.innerHTML = education.project + " ";
         p.append(label);
         p.append(education.projectSummary + ".");
         
@@ -72,13 +94,13 @@ function addEducation(education){
             ul.append(li);
         }
         p.append(ul);
-        p.append("Details and source code are available on ");
+        p.append(education.projectFont_label);
         
         let a = document.createElement("a");
-        a.href = education.projectFont;
+        a.href = education.projectFont_url;
         a.target = "_blank";
-        a.ariaLabel = "GitHub repository (opens new tab)"
-        a.innerHTML = "GitHub."
+        a.ariaLabel = education.projectFont_ariaLbl;
+        a.innerHTML = `${education.projectFont}.`;
         p.append(a);
         div.append(p);
     } // end - project exist
@@ -119,5 +141,4 @@ function addWorkExperience(work){
     }
     div.append(ul);
     experienceDiv.append(div);
-
 }
