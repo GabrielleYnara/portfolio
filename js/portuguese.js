@@ -5,7 +5,7 @@ const pt = {
     contact: "Contato",
     greeting: "Eaeee!",
     introduction: "Sou Gabrielle Ynara",
-    job_title: "Sou desenvolvedora full-stack, apaixonada por aprender e capaz de me adaptar rapidamente (quase tão rápido quanto minha cachorrinha idosa esquece que acabou de ganhar um petisco).",
+    job_title: "Sou desenvolvedora full-stack, apaixonada por aprender e com facilidade em me adaptar (quase tão rápido quanto minha cachorrinha idosa esquece que acabou de ganhar um petisco).",
     current_work: "Atualmente, trabalho para uma empresa privada, e no meu tempo livre, desenvolvo projetos independentes para aprimorar minhas habilidades, explorar novos horizontes na programação e me divertir.",
     
     showcase: "Destaque",

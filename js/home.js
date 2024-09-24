@@ -13,8 +13,9 @@ function generateProjects() {
     console.log(translations);
     translations.projects.forEach((project) => {
         let inactive = project.inactive === true ? 'inactive' : '';
+        let aria_disabled = project.inactive === true ? 'aria-disabled="true" tabindex="-1"' : '';
         const projectCard = `
-            <a class="${inactive} card col-12 col-md-5 " href="https://gabrielleynara.github.io/tic-tac-toe/" target="_blank" aria-label="${project.aria_label}">
+            <a class="${inactive} card col-12 col-md-5 " href="https://gabrielleynara.github.io/tic-tac-toe/" target="_blank" aria-label="${project.aria_label}" ${aria_disabled}>
                 <span class="project">${project.title}</span>
                 <span class="project-details">${project.description}</span>
             </a>
