@@ -1,7 +1,5 @@
 // Listen for the custom languageChange event
 document.addEventListener("languageChange", (event) => {
-    console.log("Language changed to:", event.detail);
-    // generateProjects(); // Call generateProjects when the language changes
     generateResume();
 });
 let skillsDiv = document.getElementById("skills");
@@ -9,8 +7,6 @@ let educationDiv = document.getElementById("education");
 let experienceDiv = document.getElementById("experience");
 
 function generateResume() {
-    console.log("Loading resume.js");
-
     // Converts string back into object
     const translations = JSON.parse(localStorage.getItem("translations"));
     // Reset the page

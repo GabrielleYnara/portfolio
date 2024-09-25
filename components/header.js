@@ -57,18 +57,15 @@ class Header extends HTMLElement {
                 </nav>
             </header>
         `;
-        console.log("header.js runnig")
         const navBtn = this.querySelector("#navBtn");
         const closeBtn = this.querySelector("#closeBtn");
         const languageSwitcher = document.getElementById("LangSwitcher");
-        let lang = "";
 
         let currentLocation = location.pathname.split('/').pop(); // retrieves the last part of the path name
         let navItems = document.querySelectorAll("#navigation-items li");
 
         // temporary hide language options on resume and contact pages
         if (currentLocation === "contact.html"){
-            
             languageSwitcher.hidden = true;
         }
         navBtn.addEventListener("click", toggleNavMenu);
@@ -76,12 +73,10 @@ class Header extends HTMLElement {
         languageSwitcher.childNodes.forEach((item) => {
             item.addEventListener("click", toggleLanguageOption);
         });
-        console.log("selectedLanguage: ");
-        console.log(localStorage.getItem("selectedLanguage"));
         if (localStorage.getItem("selectedLanguage")) {
-            loadLanguage(localStorage.getItem("selectedLanguage"));
+            toggleLanguageOption(localStorage.getItem("selectedLanguage"));
         } else {
-            loadLanguage(document.querySelector("[lang]").getAttribute("lang"));
+            toggleLanguageOption(document.querySelector("[lang]").getAttribute("lang"));
         }
         // Runs through menu items and mark the current page as active
         navItems.forEach( (item) => {

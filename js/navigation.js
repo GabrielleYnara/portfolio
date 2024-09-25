@@ -86,10 +86,14 @@ function switchLanguage(lang) {
 }
 
 function toggleLanguageOption(event){
-    let lang = event.target.id === "portuguese" ? "pt" : "en"; 
+    let lang = event;
+    document.getElementById("english").setAttribute("hidden", "true");
+    document.getElementById("portuguese").setAttribute("hidden", "true");
 
+    if (event.target != null){
+        lang = event.target.id === "portuguese" ? "pt" : "en"; 
+    }
     //toggle visibility of language options
-    event.target.setAttribute("hidden", "true");
     if (lang == "pt") {
         document.getElementById("english").removeAttribute("hidden");
         

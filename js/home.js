@@ -1,6 +1,5 @@
 // Listen for the custom languageChange event
-document.addEventListener("languageChange", (event) => {
-    console.log("Language changed to:", event.detail);
+document.addEventListener("languageChange", () => {
     generateProjects(); // Call generateProjects when the language changes
 });
 
