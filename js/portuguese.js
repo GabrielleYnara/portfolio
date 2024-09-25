@@ -152,7 +152,7 @@ const pt = {
             location: "Mogi das Cruzes, Brasil",
             experience: [
                 "Prestei atendimento ao cliente.",
-                "Testei novas versões ou pequenas correções menores.",
+                "Testei novas versões ou pequenas correções.",
                 "Atualizei remotamente bases de clientes.",
                 "Gerei relatórios de consultas e realizei pequenos ajustes no banco de dados (PostgreSQL)."
             ]
