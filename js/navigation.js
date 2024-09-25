@@ -76,33 +76,30 @@ function loadFile(lang) {
         script.id = `${lang}-script`; // to track if it has been loaded
         document.body.append(script);
         script.onload = () => {
-            loadTranslation(lang);
+            const translations = lang === "en" ? en : pt;
+            console.log("saving translations on local storage");
+            // Save the selected language and translations in local storage
+            localStorage.setItem("selectedLanguage", lang); 
+            // Convert the object into JSON, since localStorage accepts only string 
+            localStorage.setItem("translations", JSON.stringify(translations));
+            loadTranslation();
             dispatchLangChange(lang);
         }
     } else {
         console.log("script already created");
-        loadTranslation(lang);
+        loadTranslation();
         dispatchLangChange(lang);
     }
 }
 
 // replace elements with value in key stored on files
-function loadTranslation(lang) {
+function loadTranslation() {
     console.log("load translation");
     const elements = document.querySelectorAll("[data-translate]");
-    const translations = lang === "en" ? en : pt;
+    const translations = JSON.parse(localStorage.getItem("translations"));
+    
     console.log("translations: ");
     console.log(translations);
-    if (!localStorage.getItem("selectedLanguage")){
-        console.log("saving translations on local storage");
-        // Save the selected language and translations in local storage
-        localStorage.setItem("selectedLanguage", lang); 
-        // Convert the object into JSON, since localStorage accepts only string 
-        localStorage.setItem("translations", JSON.stringify(translations));
-    } else {
-        console.log("translations already on local storage");
-    }
-    
     elements.forEach (el => {
         const key = el.getAttribute("data-translate");
         if (key === "showcase_description") {
