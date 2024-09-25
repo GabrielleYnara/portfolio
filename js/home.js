@@ -1,6 +1,5 @@
 // Listen for the custom languageChange event
-document.addEventListener("languageChange", (event) => {
-    console.log("Language changed to:", event.detail);
+document.addEventListener("languageChange", () => {
     generateProjects(); // Call generateProjects when the language changes
 });
 
@@ -9,8 +8,6 @@ function generateProjects() {
     const translations = JSON.parse(localStorage.getItem("translations"));
     const projectContainer = document.querySelector(".show-items");
     projectContainer.innerHTML = ""; // Clear existing projects
-    console.log("GenerateProjects");
-    console.log(translations);
     translations.projects.forEach((project) => {
         let inactive = project.inactive === true ? 'inactive' : '';
         let aria_disabled = project.inactive === true ? 'aria-disabled="true" tabindex="-1"' : '';
