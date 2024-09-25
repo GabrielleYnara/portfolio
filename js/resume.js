@@ -1,8 +1,15 @@
+window.addEventListener('DOMContentLoaded', () => {
+    // Check if language is already set in localStorage and generate resume
+    const lang = localStorage.getItem("selectedLanguage") || "en"; // Default to English if none is found
+    generateResume(); // Generate content based on stored language
+});
+
 // Listen for the custom languageChange event
 document.addEventListener("languageChange", () => {
     console.log("resume.js notified, gerenate Resume");
     generateResume();
 });
+
 let skillsDiv = document.getElementById("skills");
 let educationDiv = document.getElementById("education");
 let experienceDiv = document.getElementById("experience");

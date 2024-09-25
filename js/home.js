@@ -1,3 +1,9 @@
+window.addEventListener('DOMContentLoaded', () => {
+    // Check if language is already set in localStorage and generate projects
+    const lang = localStorage.getItem("selectedLanguage") || "en"; // Default to English if none is found
+    generateProjects(); // Generate content based on stored language
+});
+
 // Listen for the custom languageChange event
 document.addEventListener("languageChange", () => {
     console.log("home.js notified, gerenate Projects");
