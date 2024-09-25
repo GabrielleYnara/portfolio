@@ -1,3 +1,4 @@
+console.log("Portuguese file accessed");
 const pt = {
     home:"Início",
     resume: "Currículo",

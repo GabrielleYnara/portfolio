@@ -1,5 +1,6 @@
 // Listen for the custom languageChange event
-document.addEventListener("languageChange", (event) => {
+document.addEventListener("languageChange", () => {
+    console.log("resume.js notified, gerenate Resume");
     generateResume();
 });
 let skillsDiv = document.getElementById("skills");

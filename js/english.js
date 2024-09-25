@@ -1,3 +1,4 @@
+console.log("English file accessed");
 const en = {
     home: "Home",
     resume: "Resume",

@@ -42,38 +42,67 @@ function removeActive(element) {
     element.removeAttribute("aria-current");
 }
 
+function toggleLanguageOption(event){
+    console.log("toggling language option");
+    let lang = event;
+    // Hide both options
+    document.getElementById("english").setAttribute("hidden", "true");
+    document.getElementById("portuguese").setAttribute("hidden", "true");
+
+    if (event.target != null){
+        console.log("triggered by click");
+        lang = event.target.id === "portuguese" ? "pt" : "en"; 
+    }
+    //toggle visibility of proper language option
+    if (lang == "pt") {
+        document.getElementById("english").removeAttribute("hidden");
+    } else {
+        document.getElementById("portuguese").removeAttribute("hidden");
+    }
+
+    // Set the language attribute and load the translation
+    document.querySelector("[lang]").setAttribute("lang", lang);
+    loadFile(lang);
+}
+
 // loads the file
-function loadLanguage(lang) {
+function loadFile(lang) {
+    console.log("load file")
     if (!document.getElementById(`${lang}-script`)){ //prevents reloading the script
+        console.log("creating script tag");
         let script = document.createElement("script");
         let file = lang === "pt" ? "portuguese" : "english";
         script.src = `js/${file}.js`;
         script.id = `${lang}-script`; // to track if it has been loaded
         document.body.append(script);
         script.onload = () => {
-            switchLanguage(lang);
-            // Dispatch custom event to inform home.js of language change
-            const langChangeEvent = new CustomEvent("languageChange", { detail: lang });
-            document.dispatchEvent(langChangeEvent); // Dispatch event
+            loadTranslation(lang);
+            dispatchLangChange(lang);
         }
-        
     } else {
-        switchLanguage(lang);
-        // Dispatch custom event to inform home.js of language change
-        const langChangeEvent = new CustomEvent("languageChange", { detail: lang });
-        document.dispatchEvent(langChangeEvent); // Dispatch event
+        console.log("script already created");
+        loadTranslation(lang);
+        dispatchLangChange(lang);
     }
 }
 
 // replace elements with value in key stored on files
-function switchLanguage(lang) {
+function loadTranslation(lang) {
+    console.log("load translation");
     const elements = document.querySelectorAll("[data-translate]");
-    const translations = lang === "en" ? en : pt; 
-
-    // Save the selected language and translations in local storage
-    localStorage.setItem("selectedLanguage", lang); 
-    // Convert the object into JSON, since localStorage accepts only string 
-    localStorage.setItem("translations", JSON.stringify(translations));
+    const translations = lang === "en" ? en : pt;
+    console.log("translations: ");
+    console.log(translations);
+    if (!localStorage.getItem("selectedLanguage")){
+        console.log("saving translations on local storage");
+        // Save the selected language and translations in local storage
+        localStorage.setItem("selectedLanguage", lang); 
+        // Convert the object into JSON, since localStorage accepts only string 
+        localStorage.setItem("translations", JSON.stringify(translations));
+    } else {
+        console.log("translations already on local storage");
+    }
+    
     elements.forEach (el => {
         const key = el.getAttribute("data-translate");
         if (key === "showcase_description") {
@@ -81,27 +110,12 @@ function switchLanguage(lang) {
         } else {
             el.textContent = translations[key];
         }
-        
     });
 }
 
-function toggleLanguageOption(event){
-    let lang = event;
-    document.getElementById("english").setAttribute("hidden", "true");
-    document.getElementById("portuguese").setAttribute("hidden", "true");
-
-    if (event.target != null){
-        lang = event.target.id === "portuguese" ? "pt" : "en"; 
-    }
-    //toggle visibility of language options
-    if (lang == "pt") {
-        document.getElementById("english").removeAttribute("hidden");
-        
-    } else {
-        document.getElementById("portuguese").removeAttribute("hidden");
-    }
-
-    // Set the language attribute and load the translation
-    document.querySelector("[lang]").setAttribute("lang", lang);
-    loadLanguage(lang);
+function dispatchLangChange(lang){
+    console.log("dispatch language change event");
+    // Dispatch custom event to inform home.js of language change
+    const langChangeEvent = new CustomEvent("languageChange", { detail: lang });
+    document.dispatchEvent(langChangeEvent); // Dispatch event
 }
