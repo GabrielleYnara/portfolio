@@ -76,12 +76,6 @@ function loadFile(lang) {
         script.id = `${lang}-script`; // to track if it has been loaded
         document.body.append(script);
         script.onload = () => {
-            const translations = lang === "en" ? en : pt;
-            console.log("saving translations on local storage");
-            // Save the selected language and translations in local storage
-            localStorage.setItem("selectedLanguage", lang); 
-            // Convert the object into JSON, since localStorage accepts only string 
-            localStorage.setItem("translations", JSON.stringify(translations));
             loadTranslation();
             dispatchLangChange(lang);
         }
@@ -96,9 +90,13 @@ function loadFile(lang) {
 function loadTranslation() {
     console.log("load translation");
     const elements = document.querySelectorAll("[data-translate]");
-    const translations = JSON.parse(localStorage.getItem("translations"));
-    
-    console.log(translations);
+    const lang = document.querySelector("[lang]").getAttribute("lang");
+    const translations = lang === "en" ? en : pt;
+    console.log("saving translations on local storage");
+    // Save the selected language and translations in local storage
+    localStorage.setItem("selectedLanguage", lang); 
+    // Convert the object into JSON, since localStorage accepts only string 
+    localStorage.setItem("translations", JSON.stringify(translations));
     elements.forEach (el => {
         const key = el.getAttribute("data-translate");
         if (key === "showcase_description") {
