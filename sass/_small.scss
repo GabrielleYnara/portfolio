@@ -27,7 +27,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     margin: 25px;
-    line-height: 1.5;
+    line-height: 1.5; 
 }
 
 /*----------------------------- Navigation -----------------------------*/
@@ -251,8 +251,32 @@ footer {
         border-radius: 5px;
         font-family: 'Montserrat', sans-serif;
     }
-    label{
-        margin-top: 5px;
+    label {
+        margin: 10px 0 3px;
+    }
+    // input, textarea{
+    //     margin-bottom: 10px;
+    // }
+    h2 {
+        text-align: center;
+    }
+    #sendBtn{
+        margin-top: 15px;
+        color: $secondaryTextColor;
+        border-color: $secondaryTextColor;
+        &:hover {
+            background-color: $secondaryTextColor;
+            color: $darkBackground;
+        }
+    }
+    .invalid-feedback{
+        margin-top: px;
+        &.show{
+            display: inline-block;
+        }
+    }
+    .invalid{
+        border: 2px solid #7d2239;
     }
 }
 

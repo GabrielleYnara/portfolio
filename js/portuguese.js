@@ -158,5 +158,17 @@ const pt = {
                 "Gerei relatórios de consultas e realizei pequenos ajustes no banco de dados (PostgreSQL)."
             ]
         }
-    ]
+    ],
+
+    contact_me: "Me envie uma mensagem",
+    name: "Nome",
+    name_placeholder: "Nome e Sobrenome",
+    required_name: "Coloque seu nome, assim eu saberei quem você é.",
+    email: "Email",
+    email_placeholder: "exemplo@email.com",
+    required_email: "Adicione seu email, para que eu possa te responder.",
+    message: "Mensagem",
+    message_placeholder: "Escreva sua mensagem aqui",
+    required_message: "Não se esqueça da sua mensagem.",
+    send: "Enviar"
 };

@@ -157,5 +157,18 @@ const en = {
             "Reported queries, and conducted minor database troubleshooting (PostgreSQL)."
           ]
         }
-      ]
+    ],
+
+    contact_me: "Send me a message",
+    name: "Name",
+    name_placeholder: "First and Last name",
+    required_name: "Put down your name, so I know who you are.",
+    email: "Email",
+    email_placeholder: "example@email.com",
+    required_email: "Add your email, so I can answer you.",
+    message: "Message",
+    message_placeholder: "Write your message here",
+    required_message: "Don't forget your message.",
+    send: "Send"
+
 };

@@ -98,7 +98,6 @@ function loadTranslation() {
     const elements = document.querySelectorAll("[data-translate]");
     const translations = JSON.parse(localStorage.getItem("translations"));
     
-    console.log("translations: ");
     console.log(translations);
     elements.forEach (el => {
         const key = el.getAttribute("data-translate");
