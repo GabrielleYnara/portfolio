@@ -27,7 +27,7 @@ class Header extends HTMLElement {
                 </div>
                 <nav>
                     <ul id="navigation-items">
-                        <li class="active" aria-current="page">
+                        <li>
                             <a href="index.html" data-translate="home">Home</a>
                         </li>
                         <li>
@@ -77,14 +77,19 @@ class Header extends HTMLElement {
             console.log("using html lang attribute");
             toggleLanguageOption(document.querySelector("[lang]").getAttribute("lang"));
         }
-        // Runs through menu items and mark the current page as active
-        navItems.forEach( (item) => {
-            if (item.children[0].href.split('/').pop() === currentLocation) {
-                activePage(item);
-            } else {
-                removeActive(item);
-            }
-        });
+        if (currentLocation == "" ){ // Standard Home cuurent page active
+            activePage(document.querySelector("li a[href='index.html']").parentElement);
+        } else {
+             // Runs through menu items and mark the current page as active
+            navItems.forEach( (item) => {
+                if (item.children[0].href.split('/').pop() === currentLocation) {
+                    activePage(item);
+                } else {
+                    removeActive(item);
+                }
+            });
+        }
+       
     }
 }
 //register the element
