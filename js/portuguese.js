@@ -58,6 +58,10 @@ const pt = {
             "Cucumber", "Mockito"]
         },
         {
+            category: "Acessibilidade",
+            items: ["Expertise em padrões de acessibilidade, incluindo compatibilidade com leitores de tela, interatividade via teclado, contraste de cores e PDFs acessíveis."]
+        },          
+        {
             category: "Habilidades Comportamentais", 
             items: ["Adaptabilidade", "Trabalho em Equipe", "Comunicação Intercultural", "Resolução de Problemas"]
         },
@@ -96,13 +100,15 @@ const pt = {
     work_label: "Experiência Profissional",
     work_experience: [
         {
-            role: "Engenheira de Software Júnior",
+            role: "Engenheira de Software",
             period: "01/2024 - presente",
             company: "Interapt (Parceria com CVS)",
             location: "Louisville, KY",
             experience: [
-                "Recebi reconhecimento por minha resolução proativa de problemas e adaptabilidade, contribuindo significativamente para a equipe logo após ingressar.",
-                "Entreguei 10 histórias de usuário nos dois primeiros meses, focando na melhoria da acessibilidade do site, demonstrando rápida adaptação e proficiência técnica."
+              "<strong>Desenvolvi expertise em acessibilidade</strong>, refatorando soluções em JavaScript para melhorar a acessibilidade e usabilidade em várias páginas. Resolvi problemas com downloads de arquivos, pop-ups de calendário e mensagens de alerta usando JavaScript, garantindo uma melhor experiência para o usuário. Pesquisei PDFs acessíveis e aprimorei a acessibilidade da interface (interatividade via teclado, contraste de cores, legibilidade). Analisei nosso aplicativo móvel para criação de uma apresentação, identificando problemas que levaram à criação de histórias de usuário para corrigi-los.",
+              "Colaborei em projetos complexos, incluindo deep linking e gerenciamento de redirecionamento baseado em cookies utilizando URLs específicas para cada ambiente.",
+              "Gerenciei atualizações de links e recursos, manuseando arquivos JSP e de configuração para garantir atualizações precisas.",
+              "<strong>Recebi reconhecimento precoce</strong> por minha proatividade na resolução de problemas e pela colaboração eficaz com a equipe e desenvolvedores em diferentes níveis de senioridade."
             ]
         },
         {

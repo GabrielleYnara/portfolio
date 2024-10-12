@@ -59,6 +59,10 @@ const en = {
             "Cucumber", "Mockito"]
         },
         {
+          category: "Accessibility",
+          items: ["Expertise in accessibility standards, including screen reader compatibility, keyboard interactivity, color contrast, and accessible PDFs"]
+        },
+        {
             category: "Human Skills",
             items: ["Flexibility", "Team Collaboration", "Intercultural Communication", "Problem-Solving"]
         },
@@ -95,13 +99,15 @@ const en = {
     work_label: "Work Experience",
     work_experience: [
         {
-          role: "Junior Software Engineer",
+          role: "Software Engineer",
           period: "01/2024 - present",
           company: "Interapt (Partnered with CVS)",
           location: "Louisville, KY",
           experience: [
-            "Earned early recognition for proactive problem-solving and adaptability, contributing significantly to the team shortly after joining.",
-            "Delivered 10 user stories within the first two months, focusing on enhancing the website's accessibility. Showcasing rapid acclimatization and technical proficiency."
+            "<strong>Developed expertise in accessibility</strong>, including refactoring JavaScript solutions to improve accessibility and usability across multiple pages. Resolved issues with file downloads, calendar pop-ups, and alert messages using JavaScript, ensuring an improved user experience. Conducted research on accessible PDFs and enhanced UI accessibility (keyboard interactivity, color contrast, readability). Analyzed our mobile app to create a presentation, identifying issues that led to the creation of user stories to fix them.",
+            "Collaborated on complex projects, including deep linking and managing cookie-based redirection using environment-specific URL handling.",
+            "Managed link and resource updates, including handling JSP and configuration files to ensure accurate content updates.",
+            "<strong>Earned early recognition</strong> for proactive problem-solving and effective collaboration with senior developers and team members."
           ]
         },
         {
