@@ -28,6 +28,18 @@ body {
     font-size: 16px;
     margin: 25px;
     line-height: 1.5; 
+    min-height: 94vh;
+    display: flex;
+    flex-direction: column;
+}
+*:focus{
+    outline: 2px solid $secondaryTextColor;
+    outline-offset: 3px;
+    border-radius: 2px; 
+}
+main {
+    flex: 1;
+    margin-top: 20px;
 }
 
 /*----------------------------- Navigation -----------------------------*/
@@ -144,10 +156,14 @@ nav {
 .external-links {
     z-index: 1000;
 }
-/* END - Styling navigation */
-main {
-    margin-top: 20px;
+.add-line {
+    border-top: 1px solid $grayAccent;
+    width: 96%;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
+/* END - Styling navigation */
+
 /*----------------------------- Home Page -----------------------------*/
 /* Styling Introduction section */
 .introduction {
@@ -180,11 +196,13 @@ main {
         background-color: #8FA6C2;
         font-size: 1.2em;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        font-weight: 450;
         &.inactive{
             cursor:none;
             pointer-events: none;
             background-color: #4F6682;
-            color: #fff;
+            color: $midBackground;
+            font-weight: normal;
         }
         &:hover:not(.inactive){
             box-shadow: 0 0 30px 0 rgba(81, 122, 154, 0.5);
@@ -196,18 +214,29 @@ main {
 }
 
 /* Styling quote */
-footer {
-    display: flex;
+footer{
+    position:relative;
+    bottom: 0;
+    width: 100%;
 }
 .quote {
-    margin-top: 4em;
-    color: #929292;
+    margin-top: 2em;
+    color: $grayText;
     span:nth-child(2){
         font-style: italic;
     }
     span {
         display: block;
     }
+}
+#source-code {
+    display: block;
+    text-decoration: none;
+    border-top: 1px solid $grayText;
+    text-align: center;
+    padding-top: 7px;
+    font-size: 12px;
+    color: $grayText;
 }
 /* END - Styling quote */
 

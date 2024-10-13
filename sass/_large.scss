@@ -50,29 +50,27 @@
 }
 #linkedin {
     position: fixed;
-    bottom: 70px;
+    bottom: 103px;
 }
 #github{
     position: fixed;
-    bottom: 20px;
+    bottom: 55px;
 }
 .visibility {
     display: none;
 }
-path {
-    fill: $secondaryTextColor;
-}
+
 .logo {
     margin: 3px 5px 7px 0px;
     width: 35px;
     height: 35px;
+    path {
+        fill: $secondaryTextColor;
+    }
 }
 
 /*----------------------------- Home Page -----------------------------*/
-/* Styling quote */
-.quote {
-    margin-top: 7em;
-}
+
 
 /*----------------------------- Resume Page -----------------------------*/
 .resume{

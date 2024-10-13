@@ -43,6 +43,8 @@ const en = {
 
     quote: "You're better off starting imperfectly, than being paralyzed by the hope or illusion of perfection.",
     quote_font: "- Can't remember where I heard it, but it sure sounds true!",
+    source_code: "Built by Gabrielle Ynara",
+    source_code_aria_lbl: "Opens source code in a new tab",
 
     resume: "Resume",
 

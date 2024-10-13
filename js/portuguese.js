@@ -43,6 +43,8 @@ const pt = {
 
     quote: "É melhor começar de forma imperfeita do que ser paralisado pela esperança ou ilusão de perfeição.",
     quote_font: "- Não consigo lembrar de onde ouvi isso, mas parece bem verdade!",
+    source_code: "Criado por Gabrielle Ynara",
+    source_code_aria_lbl: "Abre o código fonte em uma nova aba",
 
     resume: "Currículo",
     skills_label: "Qualificações",
@@ -59,7 +61,7 @@ const pt = {
         },
         {
             category: "Acessibilidade",
-            items: ["Expertise em padrões de acessibilidade, incluindo compatibilidade com leitores de tela, interatividade via teclado, contraste de cores e PDFs acessíveis."]
+            items: ["Expertise em padrões de acessibilidade, incluindo compatibilidade com leitores de tela, interatividade via teclado, contraste de cores e PDFs acessíveis"]
         },          
         {
             category: "Habilidades Comportamentais", 

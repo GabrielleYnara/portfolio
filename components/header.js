@@ -37,7 +37,7 @@ class Header extends HTMLElement {
                             <a href="contact.html" data-translate="contact">Contact</a>
                         </li>
                         <li class="add-line" aria-hidden="true" tabindex="-1">
-                            <a href="empty_.html" aria-hidden="true" tabindex="-1"></a>
+                            <a href="#" aria-hidden="true" tabindex="-1"></a>
                         </li>
                         <li class="external-links" id="linkedin">
                             <a href="https://www.linkedin.com/in/gabrielleynara/" target="_blank" aria-label="My LinkedIn profile (opens new tab)">
