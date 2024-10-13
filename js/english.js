@@ -108,7 +108,8 @@ const en = {
             "Collaborated on complex projects, including deep linking and managing cookie-based redirection using environment-specific URL handling.",
             "Managed link and resource updates, including handling JSP and configuration files to ensure accurate content updates.",
             "<strong>Earned early recognition</strong> for proactive problem-solving and effective collaboration with senior developers and team members."
-          ]
+          ],
+          expanded: true
         },
         {
           role: "Associate Solution Engineer",
@@ -119,17 +120,19 @@ const en = {
             "Collaborated with a sales team of 10 Account Executives and their manager to understand customer needs and goals, and suggest adequate products from a technical and business perspective.",
             "Performed over 240 tailored demonstrations, increasing deals closed rate.",
             "Led training sessions on three products to a sales team of 20 to 30 people."
-          ]
+          ],
+          expanded: true
         },
         {
           role: "Au Pair",
           period: "04/2018 - 07/2020",
           company: "Cultural Care",
-          location: "Maplewood, NJ; Lafayette, CA; Franklin, TN",
+          location: "Maplewood - NJ, Lafayette - CA, Franklin - TN",
           experience: [
             "Provided consistent care for 5 children across 3 different families, ranging in age from 2 months to 6 years.",
             "Adapted to varying family environments and childcare needs, enhancing critical thinking, global awareness, and intercultural communication skills."
-          ]
+          ],
+          expanded: false
         },
         {
           role: "Intern Web Developer",
@@ -139,7 +142,8 @@ const en = {
           experience: [
             "Developed and maintained reports.",
             "Updated design, and conducted minor bug fixes and development, resulting in improved website functionality."
-          ]
+          ],
+          expanded: false
         },
         {
           role: "Administrative Assistant",
@@ -149,7 +153,8 @@ const en = {
           experience: [
             "Managed administrative activities, including customer service, marketing, financial control, and teachers and students administration.",
             "Created a filing system and spreadsheets for better governance."
-          ]
+          ],
+          expanded: false
         },
         {
           role: "Junior Technical Support Assistant",
@@ -161,7 +166,8 @@ const en = {
             "Tested new versions or minor fixes.",
             "Remotely updated customer bases.",
             "Reported queries, and conducted minor database troubleshooting (PostgreSQL)."
-          ]
+          ],
+          expanded: false
         }
     ],
 

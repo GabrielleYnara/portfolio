@@ -55,7 +55,7 @@ body.blur > *:not(header-component){
     align-items: center;       /* Aligns it vertically in the container */
 }
 /* Removes standard button characteristics */
-#navBtn, #closeBtn { // open and close menu buttons
+#navBtn, #closeBtn, .icon { // open and close menu buttons
     background: transparent;   
     border: none; 
     padding: 0;  
@@ -63,6 +63,9 @@ body.blur > *:not(header-component){
     box-shadow: none; 
     appearance: none;   /* Removes default appearance on some browsers */
     cursor: pointer;    /* Ensures the pointer shows on hover */
+
+}
+#navBtn, #closeBtn {
     width: 44px;
     height: 44px;
 }
@@ -236,10 +239,18 @@ footer {
     p, ul {
         margin-bottom: 5px;
     }
+    .expandable{
+        cursor: pointer;
+    }
 }
 #skills {
     margin-bottom: 15px;
 }
+.thin-line {
+    color: $accentColor;
+    box-shadow: 2px 2px 5px $accentColor;
+}
+
 /* END - Styling Resume */
 
 /*----------------------------- Contact Page -----------------------------*/
@@ -257,7 +268,7 @@ footer {
     // input, textarea{
     //     margin-bottom: 10px;
     // }
-    h2 {
+    h1 {
         text-align: center;
     }
     #sendBtn{
@@ -271,12 +282,13 @@ footer {
     }
     .invalid-feedback{
         margin-top: px;
+        color: $errorAccent;
         &.show{
             display: inline-block;
         }
     }
     .invalid{
-        border: 2px solid #7d2239;
+        border: 2px solid $errorDarkerAccent;
     }
 }
 

@@ -109,7 +109,8 @@ const pt = {
               "Colaborei em projetos complexos, incluindo deep linking e gerenciamento de redirecionamento baseado em cookies utilizando URLs específicas para cada ambiente.",
               "Gerenciei atualizações de links e recursos, manuseando arquivos JSP e de configuração para garantir atualizações precisas.",
               "<strong>Recebi reconhecimento precoce</strong> por minha proatividade na resolução de problemas e pela colaboração eficaz com a equipe e desenvolvedores em diferentes níveis de senioridade."
-            ]
+            ],
+            expanded: true
         },
         {
             role: "Engenheira de Soluções Associada",
@@ -120,17 +121,19 @@ const pt = {
                 "Colaborei com uma equipe de vendas composta por 10 Executivos de Contas e seu gerente para entender as necessidades e objetivos dos clientes, sugerindo produtos adequados sob uma perspectiva técnica e de negócios.",
                 "Realizei mais de 240 demonstrações personalizadas, aumentando a taxa de fechamento de negócios.",
                 "Liderei sessões de treinamento sobre três produtos para uma equipe de vendas de 20 a 30 pessoas."
-            ]
+            ],
+            expanded: true
         },
         {
             role: "Au Pair",
             period: "04/2018 - 07/2020",
             company: "Cultural Care",
-            location: "Maplewood, NJ; Lafayette, CA; Franklin, TN",
+            location: "Maplewood - NJ, Lafayette - CA, Franklin - TN",
             experience: [
                 "Proporcionei cuidados consistentes para 5 crianças em 3 famílias diferentes, com idades variando de 2 meses a 6 anos.",
                 "Me Adaptei a diferentes ambientes familiares e necessidades de cuidado infantil, aprimorando o pensamento crítico, a consciência global e as habilidades de comunicação intercultural."
-            ]
+            ],
+            expanded: false
         },
         {
             role: "Estagiária em Desenvolvimento Web",
@@ -140,7 +143,8 @@ const pt = {
             experience: [
                 "Desenvolvi e mantive relatórios.",
                 "Atualizei o design, realizei desenvolvimento e correções de bugs menores, resultando em melhorias na funcionalidade do site."
-            ]
+            ],
+            expanded: false
         },
         {
             role: "Assistente Administrativa",
@@ -150,7 +154,8 @@ const pt = {
             experience: [
                 "Gerenciei atividades administrativas, incluindo atendimento ao cliente, marketing, controle financeiro, e administração de professores e alunos.",
                 "Criei um sistema de arquivamento e planilhas para melhorar a governança."
-            ]
+            ],
+            expanded: false
         },
         {
             role: "Assistente Técnico Júnior de Suporte",
@@ -162,7 +167,8 @@ const pt = {
                 "Testei novas versões ou pequenas correções.",
                 "Atualizei remotamente bases de clientes.",
                 "Gerei relatórios de consultas e realizei pequenos ajustes no banco de dados (PostgreSQL)."
-            ]
+            ],
+            expanded: false
         }
     ],
 

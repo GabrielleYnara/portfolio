@@ -114,6 +114,8 @@ function addEducation(education){
 function addWorkExperience(work){
     div = document.createElement("div");
     div.classList.add("work");
+    headerDiv = document.createElement("div");
+    headerDiv.classList.add("expandable");
     let row = document.createElement("div");
     let p = document.createElement("p");
     let label = document.createElement("b");
@@ -127,22 +129,74 @@ function addWorkExperience(work){
     span = document.createElement("span");
     span.classList.add("col-xs-12");
     span.classList.add("col-sm-4");
-    span.classList.add("text-end")
+    span.classList.add("text-end");
     span.innerHTML = work.period;
     row.append(span);
-    div.append(row);
+    headerDiv.append(row);
 
+    secondRow = document.createElement("div");
+    secondRow.classList.add("row");
     p = document.createElement("p");
+    p.classList.add("col-11");
     p.innerHTML = work.company + " | " + work.location;
+    secondRow.append(p);
+    icon = document.createElement("button");
+    icon.classList.add("col-1");
+    icon.classList.add("text-end");
+    icon.classList.add("icon");
+    secondRow.append(icon);
 
-    div.append(p);
+    headerDiv.append(secondRow);
+    div.append(headerDiv);
 
     let ul = document.createElement("ul");
+    ul.classList.add("work-description");
     for (let i = 0; i < work.experience.length; i++){
         let li = document.createElement("li");
         li.innerHTML = work.experience[i];
         ul.append(li);
     }
     div.append(ul);
+
+    let line = document.createElement("hr");
+    line.classList.add("thin-line");
+    line.setAttribute("aria-hidden", "true");
+    div.append(line);
     experienceDiv.append(div);
+
+    //Dynamically expands or collapses the job description according to data;
+    if (work.expanded){
+        showJobDescription(ul);
+    } else {
+        hideJobDescription(ul);
+    }
+    headerDiv.addEventListener("click", toggleJobDescription);
+}
+
+function toggleJobDescription(event){
+    let el = event.target.closest(".expandable"); 
+    if (el.nextSibling.getAttribute("hidden")) {
+        showJobDescription(el.nextSibling);
+    } else {
+        hideJobDescription(el.nextSibling);
+    }
+}
+
+function hideJobDescription(element) {  
+    element.setAttribute("hidden", "true");
+    let icon = element.previousSibling.lastChild.lastChild;
+    icon.setAttribute("aria-expanded", "false");
+    icon.setAttribute("aria-label", "Show Job Description");
+    icon.innerHTML = `<svg viewBox="0 0 24 24" width="22px" height="22px" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M19 9L12 15L5 9" stroke="#c2d4e1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>`;
+    element.nextSibling.removeAttribute("hidden");
+}
+
+function showJobDescription(element) {
+    element.removeAttribute("hidden"); //show description
+    element.nextSibling.setAttribute("hidden", "true"); //hide line
+    let icon = element.previousSibling.lastChild.lastChild;
+    icon.setAttribute("aria-label", "Hide Job Description");
+    icon.setAttribute("aria-expanded", "true");
+    // icon.setAttribute("","");
+    icon.innerHTML = `<svg viewBox="0 0 24 24" width="22px" height="22px" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M19 15L12 9L5 15" stroke="#c2d4e1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>`;
 }
