@@ -101,7 +101,7 @@ const en = {
     work_label: "Work Experience",
     work_experience: [
         {
-          role: "Software Engineer",
+          role: "Jr. Software Engineer",
           period: "01/2024 - present",
           company: "Interapt (Partnered with CVS)",
           location: "Louisville, KY",

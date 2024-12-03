@@ -102,7 +102,7 @@ const pt = {
     work_label: "Experiência Profissional",
     work_experience: [
         {
-            role: "Engenheira de Software",
+            role: "Engenheira de Software Jr.",
             period: "01/2024 - presente",
             company: "Interapt (Parceria com CVS)",
             location: "Louisville, KY",
