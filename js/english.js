@@ -9,7 +9,7 @@ const en = {
     current_work: "Currently, I work for a private company, and in my free time, I pursue independent projects to advance my skills, explore new programming horizons, and have fun.",
     
     showcase: "Showcase",
-    showcase_description: 'Here are some cool projects, you can visit <a href="https://github.com/GabrielleYnara" target="_blank" aria-label="My GitHub profile (opens new tab)">my GitHub profile</a> for more.',
+    showcase_description: "Here are some cool projects I've worked on, you can visit <a href='https://github.com/GabrielleYnara' target='_blank' aria-label='My GitHub profile (opens new tab)'>my GitHub profile</a> for more.",
     
     projects: [
         {

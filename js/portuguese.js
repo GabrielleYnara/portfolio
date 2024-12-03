@@ -9,7 +9,7 @@ const pt = {
     current_work: "Atualmente, trabalho para uma empresa privada, e no meu tempo livre, desenvolvo projetos independentes para aprimorar minhas habilidades, explorar novos horizontes na programação e me divertir.",
     
     showcase: "Destaque",
-    showcase_description: 'Aqui estão alguns projetos legais, você pode visitar <a href="https://github.com/GabrielleYnara" target="_blank" aria-label="Meu perfil no GitHub (abre nova aba)">meu perfil no GitHub</a> para ver mais.',
+    showcase_description: 'Aqui estão alguns dos meus projetos mais legais, você pode visitar <a href="https://github.com/GabrielleYnara" target="_blank" aria-label="Meu perfil no GitHub (abre nova aba)">meu perfil no GitHub</a> para ver mais.',
     
     projects: [
         {
