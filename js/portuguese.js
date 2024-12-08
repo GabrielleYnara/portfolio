@@ -61,7 +61,7 @@ const pt = {
         },
         {
             category: "Acessibilidade",
-            items: ["Expertise em padrões de acessibilidade, incluindo compatibilidade com leitores de tela, interatividade via teclado, contraste de cores e PDFs acessíveis"]
+            items: ["Conhecimento em padrões de acessibilidade, incluindo compatibilidade com leitores de tela, interatividade via teclado, contraste de cores e PDFs acessíveis"]
         },          
         {
             category: "Habilidades Comportamentais", 

@@ -62,7 +62,7 @@ const en = {
         },
         {
           category: "Accessibility",
-          items: ["Expertise in accessibility standards, including screen reader compatibility, keyboard interactivity, color contrast, and accessible PDFs"]
+          items: ["Knowledgeable in accessibility standards, including screen reader compatibility, keyboard interactivity, color contrast, and accessible PDFs"]
         },
         {
             category: "Human Skills",
