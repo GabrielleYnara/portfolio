@@ -85,7 +85,7 @@ const pt = {
             degree: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
             period: "07/2013 - 12/2017",
             project: "Control More",
-            projectSummary: "Um sistema robusto de controle financeiro pessoal, pronto para ser personalizado e fornecer visões analíticas.",
+            projectSummary: "Um sistema robusto de controle financeiro pessoal, pronto para ser personalizado e fornecer visões analíticas",
             projectDetails: [
                 "Enfatizei a facilidade de manutenção e o mínimo impacto nas classes, utilizando padrões de design e arquitetura MVC.",
                 "Adotei boas práticas de programação e apliquei os conhecimentos adquiridos durante o curso.",
@@ -102,20 +102,29 @@ const pt = {
     work_label: "Experiência Profissional",
     work_experience: [
         {
-            role: "Engenheira de Software Jr.",
-            period: "01/2024 - presente",
+            role: "Desenvolvedora de Software",
+            period: "01/2025 - presente",
             company: "Interapt (Parceria com CVS)",
             location: "Louisville, KY",
             experience: [
-              "<strong>Desenvolvi expertise em acessibilidade</strong>, refatorando soluções em JavaScript para melhorar a acessibilidade e usabilidade em várias páginas. Resolvi problemas com downloads de arquivos, pop-ups de calendário e mensagens de alerta usando JavaScript, garantindo uma melhor experiência para o usuário. Pesquisei PDFs acessíveis e aprimorei a acessibilidade da interface (interatividade via teclado, contraste de cores, legibilidade). Analisei nosso aplicativo móvel para criação de uma apresentação, identificando problemas que levaram à criação de histórias de usuário para corrigi-los.",
-              "Colaborei em projetos complexos, incluindo deep linking e gerenciamento de redirecionamento baseado em cookies utilizando URLs específicas para cada ambiente.",
-              "Gerenciei atualizações de links e recursos, manuseando arquivos JSP e de configuração para garantir atualizações precisas.",
-              "<strong>Recebi reconhecimento precoce</strong> por minha proatividade na resolução de problemas e pela colaboração eficaz com a equipe e desenvolvedores em diferentes níveis de senioridade."
+                "Como desenvolvedora principal em um projeto em andamento, sou responsável por implementar a automação para atualizar as informações de contato dos usuários. Desenvolvi uma nova página JSP com validação dinâmica de formulários utilizando JavaScript, HTML e CSS, e adaptei a solução para dispositivos móveis. Trabalho em colaboração com o analista de negócios e outro desenvolvedor, integrando os serviços AQMS e QNTX para otimizar o fluxo de dados e reduzir processos manuais."
             ],
             expanded: true
         },
         {
-            role: "Engenheira de Soluções Associada",
+            role: "Desenvolvedora de Software Jr.",
+            period: "01/2024 - 01/2025",
+            company: "Interapt (Parceria com CVS)",
+            location: "Louisville, KY",
+            experience: [
+              "<strong>Desenvolvi expertise em acessibilidade</strong> ao refatorar soluções em JavaScript para aprimorar a usabilidade em diversas páginas—resolvendo problemas com downloads de arquivos, pop-ups de calendário e mensagens de alerta—e melhorando a acessibilidade da interface (interatividade via teclado, contraste de cores, legibilidade). Também analisei nosso aplicativo móvel para identificar questões e impulsionar a criação de histórias de usuário para melhorias contínuas.",
+              "Colaborei em projetos complexos, incluindo deep linking e gerenciamento de redirecionamento baseado em cookies utilizando URLs específicas para cada ambiente.",
+              "Gerenciei builds de snapshot com Jenkins, implantei atualizações utilizando UDeploy e utilizei Splunk para solucionar problemas de log."
+            ],
+            expanded: true
+        },
+        {
+            role: "Engenheira de Soluções",
             period: "09/2020 - 04/2022",
             company: "Salesforce",
             location: "São Paulo, Brasil",
@@ -144,7 +153,7 @@ const pt = {
             location: "Arujá, Brasil",
             experience: [
                 "Desenvolvi e mantive relatórios.",
-                "Atualizei o design, realizei desenvolvimento e correções de bugs menores, resultando em melhorias na funcionalidade do site."
+                "Atualizei o design e realizei correções menores de bugs e desenvolvimento utilizando a linguagem de programação proprietária da empresa e seu IDE legado, resultando na melhoria da funcionalidade do site."
             ],
             expanded: false
         },

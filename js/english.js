@@ -101,16 +101,24 @@ const en = {
     work_label: "Work Experience",
     work_experience: [
         {
-          role: "Jr. Software Engineer",
-          period: "01/2024 - present",
+          role: "Software Developer",
+          period: "01/2025 - present",
           company: "Interapt (Partnered with CVS)",
           location: "Louisville, KY",
           experience: [
-            "<strong>Developed expertise in accessibility</strong>, including refactoring JavaScript solutions to improve accessibility and usability across multiple pages. Resolved issues with file downloads, calendar pop-ups, and alert messages using JavaScript, ensuring an improved user experience. Conducted research on accessible PDFs and enhanced UI accessibility (keyboard interactivity, color contrast, readability). Analyzed our mobile app to create a presentation, identifying issues that led to the creation of user stories to fix them.",
-            "Collaborated on complex projects, including deep linking and managing cookie-based redirection using environment-specific URL handling.",
-            "Managed link and resource updates, including handling JSP and configuration files to ensure accurate content updates.",
-            "<strong>Earned early recognition</strong> for proactive problem-solving and effective collaboration with senior developers and team members."
+            "As the primary developer on an ongoing project, I am responsible for implementing automation to update user contact information. I developed a new JSP page with dynamic form validation using JavaScript, HTML, and CSS, and adapted the solution for mobile. I work closely with the business analyst and another developer, integrating AQMS and QNTX services to optimize data flow and reduce manual processes."
           ],
+          expanded: true
+        },
+        {
+          role: "Jr. Software Developer",
+          period: "01/2024 - 01/2025",
+          company: "Interapt (Partnered with CVS)",
+          location: "Louisville, KY",
+          experience: [
+            "<strong>Developed expertise in accessibility</strong> by refactoring JavaScript solutions to enhance usability across multiple pages—resolving issues with file downloads, calendar pop-ups, and alert messages—and improving UI accessibility (keyboard interactivity, color contrast, readability). Also analyzed our mobile app to identify issues and drive user story creation for continuous improvements.",
+            "Collaborated on complex projects including deep linking and managing cookie-based redirection with environment-specific URL handling, ensuring seamless integration and accurate content updates.",
+            "Managed snapshot builds with Jenkins, deployed updates using UDeploy, and utilized Splunk for log troubleshooting."          ],
           expanded: true
         },
         {
@@ -143,7 +151,7 @@ const en = {
           location: "Arujá, Brazil",
           experience: [
             "Developed and maintained reports.",
-            "Updated design, and conducted minor bug fixes and development, resulting in improved website functionality."
+            "Updated design and performed minor bug fixes and development using the company's proprietary programming language and legacy IDE, resulting in improved website functionality."
           ],
           expanded: false
         },
