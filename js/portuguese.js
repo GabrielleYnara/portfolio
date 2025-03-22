@@ -107,7 +107,7 @@ const pt = {
             company: "Interapt (Parceria com CVS)",
             location: "Louisville, KY",
             experience: [
-                "Como desenvolvedora principal em um projeto em andamento, sou responsável por implementar a automação para atualizar as informações de contato dos usuários. Desenvolvi uma nova página JSP com validação dinâmica de formulários utilizando JavaScript, HTML e CSS, e adaptei a solução para dispositivos móveis. Trabalho em colaboração com o analista de negócios e outro desenvolvedor, integrando os serviços AQMS e QNTX para otimizar o fluxo de dados e reduzir processos manuais."
+                "Implementando automação para atualizar informações de contato do usuário. Desenvolvi uma nova página JSP com validação dinâmica de formulários utilizando JavaScript, HTML e CSS, e adaptei a solução para dispositivos móveis. Como projeto em andamento, trabalho em colaboração com o analista de negócios e outro desenvolvedor, integrando serviços de API para otimizar o fluxo de dados e reduzir processos manuais."
             ],
             expanded: true
         },

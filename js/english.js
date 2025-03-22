@@ -106,7 +106,7 @@ const en = {
           company: "Interapt (Partnered with CVS)",
           location: "Louisville, KY",
           experience: [
-            "As the primary developer on an ongoing project, I am responsible for implementing automation to update user contact information. I developed a new JSP page with dynamic form validation using JavaScript, HTML, and CSS, and adapted the solution for mobile. I work closely with the business analyst and another developer, integrating AQMS and QNTX services to optimize data flow and reduce manual processes."
+            "Implementing automation to update user contact information. I developed a new JSP page with dynamic form validation using JavaScript, HTML, and CSS, and adapted the solution for mobile. As an ongoing project, I work closely with the business analyst and another developer, integrating API services to optimize data flow and reduce manual processes."
           ],
           expanded: true
         },

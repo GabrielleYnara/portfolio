@@ -25,7 +25,7 @@ body {
     background: $backgroundColor;
     color: $textColor;
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     margin: 25px;
     line-height: 1.5; 
     min-height: 94vh;
@@ -171,9 +171,6 @@ nav {
         font-family: 'Roboto Slab', serif;
         font-weight: 400;
     }
-    p {
-        text-align: justify;
-    }
     margin-bottom: 2em;
 }
 
@@ -247,7 +244,7 @@ footer{
         margin-bottom: 8px;
     }
     b {
-        font-size: 18px;
+        font-size: 20px;
         font-family: "Roboto Slab", serif;
         font-weight: 600;
         letter-spacing: 0.5px;
