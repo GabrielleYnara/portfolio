@@ -13,6 +13,7 @@ document.addEventListener("languageChange", () => {
 let skillsDiv = document.getElementById("skills");
 let educationDiv = document.getElementById("education");
 let experienceDiv = document.getElementById("experience");
+let certificationsDiv = document.getElementById("certifications");
 
 function generateResume() {
     // Converts string back into object
@@ -21,10 +22,13 @@ function generateResume() {
     const paragraphs = skillsDiv.querySelectorAll("p");
     const workDivs = experienceDiv.querySelectorAll("[class='work']");
     const educationDivs = educationDiv.querySelectorAll("[class='degree']");
+    const certificationItems = certificationsDiv.querySelectorAll("li");
+
     // Loop through each element and remove it
     paragraphs.forEach((p) => p.remove());    
     workDivs.forEach((div) => div.remove());
     educationDivs.forEach((div) => div.remove());
+    certificationItems.forEach((li) => li.remove());
 
     translations.skills.forEach((skill) => {
         addSkillCategory(`${skill.category}: `,stringuify(skill.items));
@@ -35,6 +39,9 @@ function generateResume() {
     translations.work_experience.forEach((experience) => {
         addWorkExperience(experience);
     });
+    translations.certifications.forEach((certification) => {
+        addCertification(certification);
+    })
 }
 
 
@@ -171,6 +178,15 @@ function addWorkExperience(work){
         hideJobDescription(ul);
     }
     headerDiv.addEventListener("click", toggleJobDescription);
+}
+
+function addCertification(certification) {
+    let ul = certificationsDiv.children[1]; //targets the unordered list 
+    let li = document.createElement("li");
+    li.innerHTML = certification;
+    ul.appendChild(li);
+    
+    certificationsDiv.append(ul);
 }
 
 function toggleJobDescription(event){

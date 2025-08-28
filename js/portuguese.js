@@ -66,15 +66,6 @@ const pt = {
         {
             category: "Habilidades Comportamentais", 
             items: ["Adaptabilidade", "Trabalho em Equipe", "Comunicação Intercultural", "Resolução de Problemas"]
-        },
-        {
-            category: "Certificações",
-            items: [
-                "Engenharia de Software Imersivo (2023) - General Assembly",
-                "Salesforce Platform App Builder (2021)",
-                "Administrador Salesforce (2021)",
-                "Desenvolvimento Full Stack Web & Mobile (2020) - Nucamp"
-            ]
         }
     ],
 
@@ -98,7 +89,7 @@ const pt = {
             projectFont_ariaLbl: "Repositório no GitHub (abre uma nova aba)"
         }
     ],
-    work_label: "Work Experience",
+    
     work_label: "Experiência Profissional",
     work_experience: [
         {
@@ -107,7 +98,8 @@ const pt = {
             company: "Interapt (Parceria com CVS)",
             location: "Louisville, KY",
             experience: [
-                "Implementando automação para atualizar informações de contato do usuário. Desenvolvi uma nova página JSP com validação dinâmica de formulários utilizando JavaScript, HTML e CSS, e adaptei a solução para dispositivos móveis. Como projeto em andamento, trabalho em colaboração com o analista de negócios e outro desenvolvedor, integrando serviços de API para otimizar o fluxo de dados e reduzir processos manuais."
+                "Implementei recursos de automação utilizando JSPs e conteúdo dinâmico (JavaScript, AJAX, HTML, CSS), otimizados para o aplicativo mobile. Colaborei com outro desenvolvedor para integrar serviços de API, otimizar o fluxo de dados e reduzir processos manuais.",
+                "Conduzi treinamentos internos sobre acessibilidade, ministrando uma sessão introdutória para públicos de diferentes equipes e um acompanhamento sobre testes de acessibilidade."
             ],
             expanded: true
         },
@@ -117,10 +109,10 @@ const pt = {
             company: "Interapt (Parceria com CVS)",
             location: "Louisville, KY",
             experience: [
-              "<strong>Desenvolvi expertise em acessibilidade</strong> ao refatorar soluções em JavaScript para aprimorar a usabilidade em diversas páginas—resolvendo problemas com downloads de arquivos, pop-ups de calendário e mensagens de alerta—e melhorando a acessibilidade da interface (interatividade via teclado, contraste de cores, legibilidade). Também analisei nosso aplicativo móvel para identificar questões e impulsionar a criação de histórias de usuário para melhorias contínuas.",
-              "Colaborei em projetos complexos, incluindo deep linking e gerenciamento de redirecionamento baseado em cookies utilizando URLs específicas para cada ambiente.",
-              "Gerenciei builds de snapshot com Jenkins, implantei atualizações utilizando UDeploy e utilizei Splunk para solucionar problemas de log."
-            ],
+                "Refatorei soluções para melhorar a acessibilidade e usabilidade em diversas páginas, resolvendo problemas com downloads de arquivos, pop-ups de calendário e mensagens de alerta. Acessibilidade da interface aprimorada por meio da interatividade do teclado, contraste de cores e melhorias na legibilidade.",
+                "Colaborei em projetos complexos, incluindo deep linking e gerenciamento de redirecionamento baseado em cookies utilizando URLs específicas para cada ambiente.",
+                "Gerenciei builds de snapshot com Jenkins, implantei atualizações utilizando UDeploy e utilizei Splunk para solucionar problemas de log."
+              ],
             expanded: true
         },
         {
@@ -183,6 +175,14 @@ const pt = {
         }
     ],
 
+    certifications_label: "Certificações",
+    certifications: [
+        "Engenharia de Software Imersivo - General Assembly (2023)", 
+        "Salesforce Platform App Builder (2021)", 
+        "Administrador Salesforce (2021)",
+        "Desenvolvimento Full Stack Web & Mobile - Nucamp (2020)"
+    ],
+    
     contact_me: "Me envie uma mensagem",
     name: "Nome",
     name_placeholder: "Nome e Sobrenome",

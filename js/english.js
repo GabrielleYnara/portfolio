@@ -67,14 +67,6 @@ const en = {
         {
             category: "Human Skills",
             items: ["Flexibility", "Team Collaboration", "Intercultural Communication", "Problem-Solving"]
-        },
-        {
-            category: "Certifications",
-            items: [
-                "Software Engineering Immersive (2023) - General Assembly", 
-                "Salesforce Platform App Builder (2021)", 
-                "Salesforce Administrator (2021)", 
-                "Full Stack Web & Mobile Development (2020) - Nucamp"]
         }
     ],
 
@@ -106,7 +98,8 @@ const en = {
           company: "Interapt (Partnered with CVS)",
           location: "Louisville, KY",
           experience: [
-            "Implementing automation to update user contact information. I developed a new JSP page with dynamic form validation using JavaScript, HTML, and CSS, and adapted the solution for mobile. As an ongoing project, I work closely with the business analyst and another developer, integrating API services to optimize data flow and reduce manual processes."
+            "Implemented automation features using JSPs and dynamic content (JavaScript, AJAX, HTML, CSS), optimized for the mobile app. Collaborated with another developer to integrate API services, streamline data flow, and reduce manual processes.",
+            "Led internal training sessions on accessibility, delivering an introductory session for cross-team audiences and a follow-up on accessibility testing."
           ],
           expanded: true
         },
@@ -116,9 +109,10 @@ const en = {
           company: "Interapt (Partnered with CVS)",
           location: "Louisville, KY",
           experience: [
-            "<strong>Developed expertise in accessibility</strong> by refactoring JavaScript solutions to enhance usability across multiple pages—resolving issues with file downloads, calendar pop-ups, and alert messages—and improving UI accessibility (keyboard interactivity, color contrast, readability). Also analyzed our mobile app to identify issues and drive user story creation for continuous improvements.",
-            "Collaborated on complex projects including deep linking and managing cookie-based redirection with environment-specific URL handling, ensuring seamless integration and accurate content updates.",
-            "Managed snapshot builds with Jenkins, deployed updates using UDeploy, and utilized Splunk for log troubleshooting."          ],
+            "Refactored JavaScript solutions to improve accessibility and usability across multiple pages, resolving issues with file downloads, calendar pop-ups, and alert messages. Enhanced UI accessibility through keyboard interactivity, color contrast, and readability improvements.",
+            "Collaborated on complex projects, including deep linking and cookie-based redirection with environment-specific URL handling, ensuring seamless integration and accurate content delivery.",
+            "Managed snapshot builds with Jenkins, deployed updates using UDeploy, and utilized Splunk for log monitoring to troubleshoot QA issues."
+          ],
           expanded: true
         },
         {
@@ -181,6 +175,14 @@ const en = {
         }
     ],
 
+    certifications_label: "Certifications",
+    certifications: [
+      "Software Engineering Immersive - General Assembly (2023)", 
+      "Salesforce Platform App Builder (2021)", 
+      "Salesforce Administrator (2021)", 
+      "Full Stack Web & Mobile Development - Nucamp (2020)"
+    ],
+    
     contact_me: "Send me a message",
     name: "Name",
     name_placeholder: "First and Last name",
