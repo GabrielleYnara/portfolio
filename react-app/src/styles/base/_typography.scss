@@ -1,4 +1,4 @@
-@import "../abstracts/variables";
+@use "../abstracts/variables" as *;
 
 @font-face {
     font-family: "Glass Antiqua";
@@ -37,7 +37,6 @@ body {
     font-family: "Crimson Pro", serif;
     font-size: 1.3rem;
     line-height: 2.1rem;
-    background-color: $background_darkTheme;
     color: $bodyText_darkTheme;
 }
 
