@@ -3,3 +3,14 @@
 body {
     background-color: $background_darkTheme;
 }
+
+/* Removes standard button characteristics */
+button {
+    background: transparent;   
+    border: none; 
+    padding: 0;  
+    margin: 0;  
+    box-shadow: none; 
+    appearance: none;   /* Removes default appearance on some browsers */
+    cursor: pointer;    /* Ensures the pointer shows on hover */
+}
