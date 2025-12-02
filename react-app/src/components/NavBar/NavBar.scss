@@ -2,8 +2,12 @@
 
 .mobile-logo {
     display: inline-block !important;
-    width: 44px;
     margin-left: 10px;
+}
+
+.mobile-logo,
+#navBtn img, #closeBtn img {
+    width: 44px;
 }
 
 nav {
@@ -23,9 +27,9 @@ nav::after {
     transform: translateX(-50%);
     width: 100vw;
     height: 1px;
-    top: 4.7rem;
+    top: 4.8rem;
     background-color: $primaryColor_darkTheme;
-  }
+}
 
 #navigation-items {
     display: none;
@@ -35,7 +39,7 @@ nav::after {
 #blurred-overlay {
     z-index: 900;
     position: fixed;
-    top: 6rem;
+    top: 5rem;
     left: 0;
     background: rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -53,14 +57,14 @@ body.blur {
 .open #navigation-items { // expand menu items
     z-index: 1000; /* Ensure it's above the blurred main content */
     position:absolute;
-    width: 80%;
+    width: 75%;
     height: fit-content;
     background-color: $background_darkTheme;
     display: inline-block;
-    margin-top: 4.8rem;
-    padding: 35px 0px 50px 50px;
-    line-height: 54px;
-    font-size: 1em;
+    margin-top: 3.9rem;
+    padding: 30px 0px 40px 50px;
+    line-height: 44px;
+    font-size: 1.1rem;
     border: 1px solid black;
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.4);
 
@@ -133,5 +137,8 @@ body.blur {
     }
     nav {
         margin: 0 20px;
+    }
+    nav::after {
+        top: 4.7rem;
     }
 }
