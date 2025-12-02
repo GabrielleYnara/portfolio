@@ -2,6 +2,8 @@
 
 body {
     background-color: $background_darkTheme;
+    margin: 0px auto !important;
+    width: 100%;
 }
 
 /* Removes standard button characteristics */
@@ -13,4 +15,13 @@ button {
     box-shadow: none; 
     appearance: none;   /* Removes default appearance on some browsers */
     cursor: pointer;    /* Ensures the pointer shows on hover */
+}
+
+@media (min-width: $breakpoint-large) {
+    body {
+        max-width: $breakpoint-large;
+    }
+    nav {
+        border-bottom-width:100vh;
+    }
 }

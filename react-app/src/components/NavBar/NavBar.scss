@@ -1,5 +1,9 @@
 @use "../../styles/abstracts/variables" as *;
 
+.mobile-logo {
+    display: inline-block !important;
+}
+
 nav {
     background-color: $background_darkTheme;
     padding-top: 1rem;
@@ -8,8 +12,18 @@ nav {
     padding-left: 1.4rem;
     display: flex;
     justify-content: space-between;
-    border-bottom: solid 1px $primaryColor_darkTheme;
 }
+
+nav::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1px;
+    top: 5.7rem;
+    background-color: $primaryColor_darkTheme;
+  }
 
 #navigation-items {
     display: none;
@@ -105,3 +119,12 @@ body.blur {
     
 }
 
+@media (min-width: $breakpoint-large) { /* Styling for large screens */
+    .mobile-logo {
+        display: none !important;
+    }
+
+    .desktop-logo {
+        display: inline !important;
+    }
+}

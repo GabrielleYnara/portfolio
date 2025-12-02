@@ -4,6 +4,7 @@ import { NavLink, Link } from "react-router-dom";
 import "./NavBar.scss";
 
 import monogram from "../../assets/img/monogram.svg";
+import primaryLogo from "../../assets/img/primary-logo.svg";
 import menuIcon from "../../assets/img/menu-icon.svg";
 import closeIcon from "../../assets/img/close-icon.svg";
 
@@ -31,9 +32,11 @@ function NavBar() {
     }
 
     return (
+        <div className="nav-wrapper">
         <nav className={isMenuOpen ? "open" : ""}>
             <Link to="/" onClick={handleNavItemClick}>
-                <img src={monogram} />
+                <img src={monogram} alt="Monogram" className="mobile-logo" hidden/>
+                <img src={primaryLogo} alt="Personal Logo" className="desktop-logo" hidden/>
             </Link>
 
             <button id="navBtn" onClick={toggleNavMenu} aria-label="Expand navigation menu" hidden={isMenuOpen}>
@@ -56,6 +59,7 @@ function NavBar() {
                 
             </div>
         </nav>
+        </div>
     );
 }
 
