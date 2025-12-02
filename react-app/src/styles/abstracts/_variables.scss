@@ -1,6 +1,6 @@
 /* ---------------------------- Screen sizes ---------------------------- */
-$breakpoint-medium: 768px;
-$breakpoint-large: 1024px;
+$breakpoint_medium: 768px;
+$breakpoint_large: 1024px;
 
 /* ---------------------------- Fonts ---------------------------- */
 $primaryFont: "Crimson Pro", serif;
@@ -11,4 +11,5 @@ $background_darkTheme: #291539;
 $primaryColor_darkTheme: #E5A857;
 $accentColor_darkTheme: #D57966;
 $bodyText_darkTheme: #EAE9F0;
+$golden_line: linear-gradient(20deg,rgba(204, 143, 63, 1) 14%, rgba(230, 192, 142, 1) 27%, rgba(204, 143, 63, 1) 47%, rgba(204, 143, 63, 1) 76%, rgba(230, 192, 142, 1) 95%);
 

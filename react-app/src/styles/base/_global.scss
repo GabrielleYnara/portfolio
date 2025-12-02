@@ -6,6 +6,10 @@ body {
     width: 100%;
 }
 
+nav + div {
+    padding: 20px;
+}
+
 /* Removes standard button characteristics */
 button {
     background: transparent;   
@@ -17,9 +21,9 @@ button {
     cursor: pointer;    /* Ensures the pointer shows on hover */
 }
 
-@media (min-width: $breakpoint-large) {
+@media (min-width: $breakpoint_large) {
     body {
-        max-width: $breakpoint-large;
+        max-width: $breakpoint_large;
     }
     nav {
         border-bottom-width:100vh;

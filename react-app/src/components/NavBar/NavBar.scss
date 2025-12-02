@@ -26,10 +26,12 @@ nav::after {
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
-    height: 1px;
+    height: 1.5px;
     top: 4.8rem;
-    background-color: $primaryColor_darkTheme;
+    background: $golden_line;
+    box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
 }
+
 
 #navigation-items {
     display: none;
@@ -103,7 +105,7 @@ body.blur {
     }
 }
 
-@media (min-width: $breakpoint-medium) { /* Styling for medium screens */
+@media (min-width: $breakpoint_medium) { /* Styling for medium screens */
     nav button,
     #external-links {
         display: none;
@@ -125,7 +127,7 @@ body.blur {
     
 }
 
-@media (min-width: $breakpoint-large) { /* Styling for large screens */
+@media (min-width: $breakpoint_large) { /* Styling for large screens */
     .mobile-logo {
         display: none !important;
     }
