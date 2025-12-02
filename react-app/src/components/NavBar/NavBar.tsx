@@ -32,7 +32,6 @@ function NavBar() {
     }
 
     return (
-        <div className="nav-wrapper">
         <nav className={isMenuOpen ? "open" : ""}>
             <Link to="/" onClick={handleNavItemClick}>
                 <img src={monogram} alt="Monogram" className="mobile-logo" hidden/>
@@ -56,10 +55,8 @@ function NavBar() {
                     <a href="https://github.com/GabrielleYnara"  onClick={handleNavItemClick} target="_blank" aria-label="Opens GitHub profile in a new tab">GitHub</a>
                     <a href="https://www.linkedin.com/in/gabrielleynara/" onClick={handleNavItemClick} target="_blank" aria-label="Opens LinkedIn profile in a new tab">LinkedIn</a>
                 </div>
-                
             </div>
         </nav>
-        </div>
     );
 }
 
