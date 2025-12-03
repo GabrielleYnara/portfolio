@@ -1,4 +1,3 @@
-import primaryLogo from "../../../../assets/img/primary-logo.svg";
 import stackedLogo from "../../../../assets/img/stacked-logo.svg";
 
 import "./Hero.scss"

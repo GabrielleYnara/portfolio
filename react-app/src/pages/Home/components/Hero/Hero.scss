@@ -14,7 +14,7 @@
     }
 
     h2 {
-        font-size: 1em;
+        font-size: 1.3rem;
     }
 }
 
@@ -33,7 +33,7 @@
 @media (min-width: $breakpoint_large) {
     .hero{
         img {
-            width: 20em;
+            width: 18em;
             margin: 20px auto;
         }
     }

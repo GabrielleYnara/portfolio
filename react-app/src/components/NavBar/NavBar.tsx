@@ -4,7 +4,6 @@ import { NavLink, Link } from "react-router-dom";
 import "./NavBar.scss";
 
 import monogram from "../../assets/img/monogram.svg";
-import primaryLogo from "../../assets/img/primary-logo.svg";
 import menuIcon from "../../assets/img/menu-icon.svg";
 import closeIcon from "../../assets/img/close-icon.svg";
 
