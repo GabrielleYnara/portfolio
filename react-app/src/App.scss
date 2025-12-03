@@ -1,0 +1,7 @@
+@use "../src/styles/abstracts/variables" as *;
+
+
+.main-content {
+    margin-top: $navbar_height;
+    padding: 0 2em;
+}
