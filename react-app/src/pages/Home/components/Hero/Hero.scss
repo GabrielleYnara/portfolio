@@ -2,19 +2,15 @@
 
 .hero {
     text-align: center;
-    min-height: calc(100svh - 6.2rem); // screen size - navbar's height
+    height: calc(100svh - $navbar_height); // screen size - navbar's height
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     
-    img.logo-mobile{
+    img{
         width: 13em;
         margin: 20px auto;
-    }
-
-    .desktop-logo {
-        display: none;
     }
 
     h2 {
@@ -34,3 +30,11 @@
     box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
 }
 
+@media (min-width: $breakpoint_large) {
+    .hero{
+        img {
+            width: 20em;
+            margin: 20px auto;
+        }
+    }
+}

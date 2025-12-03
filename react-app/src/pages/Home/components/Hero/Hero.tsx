@@ -6,8 +6,7 @@ import "./Hero.scss"
 function Hero() {
     return (
         <div className="hero">
-            <img src={stackedLogo} alt="Personal Logo" className="logo-mobile"/>
-            <img src={primaryLogo} alt="Personal Logo" className="desktop-logo"/>
+            <img src={stackedLogo} alt="Personal Logo"/>
             <h2>Software Developer specializing in Accessibility</h2>
         </div>
     );
