@@ -6,7 +6,7 @@ body {
     width: 100%;
 }
 
-nav + div {
+nav { // nav and 
     padding: 20px;
 }
 
@@ -24,8 +24,5 @@ button {
 @media (min-width: $breakpoint_large) {
     body {
         max-width: $breakpoint_large;
-    }
-    nav {
-        border-bottom-width:100vh;
     }
 }

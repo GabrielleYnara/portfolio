@@ -137,5 +137,7 @@ body.blur {
 @media (min-width: $breakpoint_large) { /* Styling for large screens */
     nav {
         margin: 0 20px;
+        max-width: $breakpoint_large;
+        margin: 0 auto;
     }
 }
