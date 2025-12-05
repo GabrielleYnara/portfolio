@@ -7,9 +7,9 @@ function Intro(){
         <div className="intro">
             <h2>Hi there, <br/> I'm Gabrielle Ynara!</h2>
             <h1>a full‑stack developer</h1>
-            <p> with a passion for accessibility. I build inclusive web and Java‑based applications and have experience in accessibility testing, cross‑team collaboration, and training.</p>
-            <p>Currently, I work for a private company; in my free time, you’ll find me tinkering with independent projects to explore new technologies, sharpen my skills, and have fun.</p>
-            <Link to="/Contact" className="accent">Contact Me</Link>
+            <p>specializing in accessible, user-centered web and Java-based applications. I’m all about improving usability, refactoring legacy code, and keeping things clean, readable, and maintainable (future me appreciates it).</p>
+            <p>I currently work in an enterprise environment where accessibility, collaboration, and problem-solving shape my day-to-day. Outside of work, I like exploring new technologies and tinkering with personal projects that help me grow as a developer.</p>
+            <Link to="/Contact" className="accent">Send me a message</Link>
         </div>
     );
 }
