@@ -1,0 +1,26 @@
+@use "../../../../styles/abstracts/variables" as *;
+
+.intro {
+    width: 90%;
+    margin: 5.5em auto;
+    text-align: center;
+
+    h2 {
+        font-size: 1.7rem;
+        color: $bodyText_darkTheme;
+    }
+
+    h1 {
+        padding: 0.5rem 0;
+    }
+    p, a {
+        font-size: 1.2rem;
+    }
+    
+    a {
+        margin-top: 30px;
+        display: flex;
+        justify-self: end;
+    }
+}
+
