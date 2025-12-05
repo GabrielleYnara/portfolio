@@ -24,3 +24,11 @@
     }
 }
 
+/* ------------------------------ Styling for medium screens ------------------------------ */
+@media (min-width: $breakpoint_medium) {
+    .intro {
+        max-width: 650px;
+        margin: 6em auto;
+    }
+    
+}

@@ -112,7 +112,8 @@ body.blur {
     }
 }
 
-@media (min-width: $breakpoint_medium) { /* Styling for medium screens */
+/* ------------------------------ Styling for medium screens ------------------------------ */
+@media (min-width: $breakpoint_medium) { 
     nav button,
     #external-links {
         display: none;
@@ -133,8 +134,8 @@ body.blur {
     }
     
 }
-
-@media (min-width: $breakpoint_large) { /* Styling for large screens */
+/* ------------------------------ Styling for large screens ------------------------------ */
+@media (min-width: $breakpoint_large) { 
     nav {
         margin: 0 20px;
         max-width: $breakpoint_large;
