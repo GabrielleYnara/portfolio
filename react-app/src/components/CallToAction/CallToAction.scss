@@ -13,3 +13,14 @@
         margin-bottom: 2.3rem;
     }
 }
+
+/* ------------------------------ Styling for medium screens ------------------------------ */
+@media (min-width: $breakpoint_medium) {
+    .cta{
+        text-align: left;
+
+        p {
+            padding: 0.4rem 0;
+        }
+    }
+}
