@@ -27,7 +27,7 @@ footer > div {
 footer > div + p {
     position: relative;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
     margin-bottom: 0;
     font-size: 0.8rem;
 }
@@ -42,3 +42,11 @@ footer > div + p::before {
     background: $bodyText_darkTheme;
     box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
 }
+
+/* ------------------------------ Styling for small-medium screens ------------------------------ */
+@media (min-width: 425px) {
+    footer > div a {
+        margin-top: 0;
+    }
+}
+
