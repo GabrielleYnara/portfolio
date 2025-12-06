@@ -6,18 +6,20 @@ import "./Footer.scss"
 
 function Footer() {
     return <footer>
-        <div>
-            <div className="external-links">
-                <a href="https://github.com/GabrielleYnara" target="_blank" aria-label="Opens GitHub profile in a new tab">
-                    <img src={gitHubLogo}/>
-                </a>
-                <a href="https://www.linkedin.com/in/gabrielleynara/" target="_blank" aria-label="Opens LinkedIn profile in a new tab">
-                    <img src={linkedInLogo}/>
-                </a>
+        <div className="content">
+            <div>
+                <div className="external-links">
+                    <a href="https://github.com/GabrielleYnara" target="_blank" aria-label="Opens GitHub profile in a new tab">
+                        <img src={gitHubLogo}/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/gabrielleynara/" target="_blank" aria-label="Opens LinkedIn profile in a new tab">
+                        <img src={linkedInLogo}/>
+                    </a>
+                </div>
+                <NavLink to="/Contact">Let's work together</NavLink>
             </div>
-            <NavLink to="/Contact">Let's work together</NavLink>
+            <p>built by Gabrielle Ynara</p>
         </div>
-        <p>built by Gabrielle Ynara</p>
     </footer>
 }
 

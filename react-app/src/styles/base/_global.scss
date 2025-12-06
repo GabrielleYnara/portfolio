@@ -2,8 +2,6 @@
 
 body {
     background-color: $background_darkTheme;
-    margin: 0px auto !important;
-    width: 100%;
 }
 
 nav { // nav and 
@@ -17,12 +15,13 @@ button {
     padding: 0;  
     margin: 0;  
     box-shadow: none; 
-    appearance: none;   /* Removes default appearance on some browsers */
-    cursor: pointer;    /* Ensures the pointer shows on hover */
+    appearance: none;   
+    cursor: pointer;
 }
 
 @media (min-width: $breakpoint_large) {
-    body {
+    main, .content {
         max-width: $breakpoint_large;
+        margin: 0px auto;
     }
 }
