@@ -1,0 +1,14 @@
+@use "../../styles/abstracts/_variables.scss" as *;
+
+.project-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0rem;
+
+    span {
+        height: 170px;
+        width: 280px;
+        background-color: rgb(198, 198, 198);
+    }
+}
