@@ -12,12 +12,24 @@
         width: 280px;
         background-color: rgb(198, 198, 198);
     }
+    p {
+        margin-top: 1.5rem;
+        background-color: #EEEDED;
+        border-radius: 15px;
+        padding: 2em 1.5em;
+        color: $background_darkTheme;
+        text-align: left;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .project-highlight:nth-last-child(-n +2) {
     padding-bottom: 3rem;
 }
-
 
 /* ------------------------------ Styling for medium screens ------------------------------ */
 @media (min-width: $breakpoint_medium) {
