@@ -1,4 +1,5 @@
 @use "../../../../styles/abstracts/variables" as *;
+@use "../../../../styles/abstracts/decorations" as *;
 
 .hero {
     text-align: center;
@@ -19,15 +20,7 @@
 }
 
 .hero::after { // draws a line after .hero
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
-    height: 0.5px;
-    bottom: 0; // Anchor to bottom of .hero
-    background: $golden_line;
-    box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+    @extend %line-divider;
 }
 
 @media (min-width: $breakpoint_large) {

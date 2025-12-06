@@ -32,7 +32,7 @@ nav::after {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 100vw;
+    width: 99vw;
     height: 1.5px;
     bottom: 0;
     background: $golden_line;
@@ -134,6 +134,7 @@ body.blur {
     }
     
 }
+
 /* ------------------------------ Styling for large screens ------------------------------ */
 @media (min-width: $breakpoint_large) { 
     nav {
