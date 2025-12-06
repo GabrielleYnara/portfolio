@@ -1,0 +1,15 @@
+@use "../../styles/abstracts/variables" as *;
+
+.cta {
+    padding: 6.5rem 0;
+    text-align: center;
+
+    p {
+        padding: 0.7rem 1.2rem;
+    }
+
+    .email {
+        color: $accentColor_darkTheme;
+        margin-bottom: 2.3rem;
+    }
+}
