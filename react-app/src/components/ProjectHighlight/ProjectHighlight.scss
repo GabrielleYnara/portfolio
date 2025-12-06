@@ -8,8 +8,10 @@
     padding: 2rem 0rem;
 
     span {
-        height: 170px;
-        width: 280px;
+        min-height: 160px;
+        max-height: 180px;
+        min-width: 240px;
+        max-height: 270px;
         background-color: rgb(198, 198, 198);
     }
     p {
@@ -34,12 +36,30 @@
 /* ------------------------------ Styling for medium screens ------------------------------ */
 @media (min-width: $breakpoint_medium) {
     .project-highlight {
+        // flex-direction: row;
+        // gap: 3.5em;
+
+        span{
+            margin-top: 1.5em;
+        }
+        .links {
+            flex-direction:row;
+            justify-content: space-around;
+        }
+    }
+}
+
+/* ------------------------------ Styling for large screens ------------------------------ */
+@media (min-width: $breakpoint_large) {
+    
+
+    .project-highlight {
         flex-direction: row;
         gap: 3.5em;
+        align-items:start;
     }
 
     .project-highlight:nth-last-child(even) {
         flex-direction: row-reverse;
     }
-    
 }
