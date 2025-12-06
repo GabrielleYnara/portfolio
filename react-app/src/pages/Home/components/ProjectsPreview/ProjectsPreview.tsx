@@ -11,9 +11,9 @@ function ProjectsPreview(){
             <p>
                 Check out some of my projects.
             </p>
-            <div id="projects">
+            <div id="projects-preview-cards">
                 <ProjectHighlight/>
-                <ProjectHighlight/>
+                <ProjectHighlight/>                
                 <NavLink to="/Projects" className="accent">See more projects</NavLink>
             </div>
             

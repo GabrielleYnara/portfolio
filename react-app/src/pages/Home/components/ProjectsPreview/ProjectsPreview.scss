@@ -1,9 +1,10 @@
 @use "../../../../styles/abstracts/variables" as *;
 
-.projects-preview #projects{
-    text-align: center;
-}
-
 .projects-preview {
     padding: 3em 0;
+
+    #projects-preview-cards{
+        text-align: center;
+    }
+
 }
