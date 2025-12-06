@@ -49,7 +49,7 @@ nav::after {
 #blurred-overlay {
     z-index: 900;
     position: fixed;
-    top: calc($navbar_height + 5px);
+    top: calc($navbar_height + 1.7rem);
     left: 0;
     background: rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -71,7 +71,7 @@ body.blur {
     height: fit-content;
     background-color: $background_darkTheme;
     display: inline-block;
-    margin-top: $navbar_height;
+    margin-top: calc($navbar_height + 0.8rem);
     padding: 20px 0px 40px 50px;
     line-height: 44px;
     font-size: 1rem;
