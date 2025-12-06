@@ -1,0 +1,22 @@
+@use "../../styles/abstracts/variables" as *;
+
+.golden-button {
+    padding: 10px 30px;
+    border-radius: 15px;
+    border: solid 2px $primaryColor_darkTheme;
+    text-decoration: none;
+    font-family: $accentFont;
+    font-size: 1.3rem;
+
+}
+.golden-button:hover {
+    background-color: rgba(127, 93, 48, 0.26);
+}
+.golden-button:active {
+    background-color: $primaryColor_darkTheme;
+    color: $background_darkTheme !important;
+}
+
+.golden-button:visited {
+    color: $primaryColor_darkTheme;
+}
