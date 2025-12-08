@@ -8,7 +8,7 @@ function Home() {
         <Hero/>
         <Intro/>
         <ProjectsPreview/>
-        <CTA/>
+        <CTA isHomePage={true}/>
     </div>;
 }
 

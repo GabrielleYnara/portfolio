@@ -3,7 +3,6 @@
 footer {
     background-color: #1C0F27;
     padding: 1em;
-    margin-top: 3em;
 
     img {
         width: 40px;
@@ -29,6 +28,7 @@ footer {
         margin-top: 1.2rem;
         margin-bottom: 0;
         font-size: 0.8rem;
+        color: #A49EA9;
     }
     .content > div + p::before {
         content: "";
@@ -38,7 +38,7 @@ footer {
         width: 85vw;
         height: 1px;
         top: 0;
-        background: $bodyText_darkTheme;
+        background: #A49EA9;
         box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
     }
 }

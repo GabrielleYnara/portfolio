@@ -13,6 +13,24 @@
     overflow: hidden;
 }
 
+%background-gradient-left { // adds an gradient backgound at an angle of 56degrees
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    background: linear-gradient(45deg, #180326, #291539, #291539, #180326);
+}
+%background-gradient-right { // adds an gradient backgound at an angle of -56degrees 
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    background: linear-gradient(-45deg, #180326, #291539, #291539, #180326);
+}
 /* ------------------------------ Styling for large screens ------------------------------ */
 @media (min-width: $breakpoint_medium) {
     

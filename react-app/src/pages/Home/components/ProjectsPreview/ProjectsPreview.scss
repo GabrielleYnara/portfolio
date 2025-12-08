@@ -1,10 +1,20 @@
 @use "../../../../styles/abstracts/variables" as *;
+@use "../../../../styles/abstracts/decorations" as *;
 
-.projects-preview {
-    padding: 3em 0;
+.projects-preview { // Add background gradient
+    @extend %background-gradient-left;
+
+}
+
+.projects-preview .inner-content {
+    padding: 5em 2em 7em 2em;
+
 
     #projects-preview-cards{
         text-align: center;
     }
+}
 
+.projects-preview::after{
+    @extend %line-divider;
 }

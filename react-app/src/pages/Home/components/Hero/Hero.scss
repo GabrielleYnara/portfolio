@@ -2,13 +2,16 @@
 @use "../../../../styles/abstracts/decorations" as *;
 
 .hero {
+    @extend %background-gradient-left;
+}
+.hero > .inner-content {
     text-align: center;
     height: calc(100svh - $navbar_height); // screen size - navbar's height
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
-    
+    padding-left: 2em;
+    padding-right: 2em;
     img{
         width: 13em;
         margin: 20px auto;

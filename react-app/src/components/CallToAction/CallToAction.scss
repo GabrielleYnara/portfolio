@@ -1,9 +1,13 @@
 @use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/decorations" as *;
 
-.cta {
-    padding: 6.5rem 0;
+.home.cta {
+    @extend %background-gradient-right;
+}
+
+.cta > .inner-content {
+    padding: 6.5rem 0 9.5rem 0;
     text-align: center;
-
     p {
         padding: 0.7rem 1.2rem;
     }
@@ -16,9 +20,9 @@
 
 /* ------------------------------ Styling for medium screens ------------------------------ */
 @media (min-width: $breakpoint_medium) {
-    .cta{
+    .cta > .inner-content {
         text-align: left;
-
+        padding-left: 2rem;
         p {
             padding: 0.4rem 0;
         }

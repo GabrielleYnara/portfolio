@@ -1,12 +1,18 @@
 @use "../../../../styles/abstracts/variables" as *;
 @use "../../../../styles/abstracts/decorations" as *;
 
-.intro {
+.intro { 
+    @extend %background-gradient-right;
+}
+.intro::after { // draws a line after .intro
+    @extend %line-divider;
+}
+
+.intro .inner-content {
     width: 90%;
-    padding: 5.5em 0;
+    padding: 5.5em 0.5em;
     margin: 0 auto;
     text-align: center;
-    position: relative;
 
     h2 {
         font-size: 1.7rem;
@@ -27,14 +33,10 @@
     }
 }
 
-.intro::after { // draws a line after .hero
-    @extend %line-divider;
-}
-
 /* ------------------------------ Styling for medium screens ------------------------------ */
 @media (min-width: $breakpoint_medium) {
-    .intro {
-        max-width: 500px;
+    .intro .inner-content {
+        max-width: 600px;
         padding: 6em 0;
         margin: 0 auto;
     }

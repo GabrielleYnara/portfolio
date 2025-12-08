@@ -26,19 +26,17 @@
     .links {
         display: flex;
         flex-direction: column;
+        gap: 1em;
     }
 }
 
 .project-highlight:nth-last-child(-n +2) {
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
 }
 
 /* ------------------------------ Styling for medium screens ------------------------------ */
 @media (min-width: $breakpoint_medium) {
     .project-highlight {
-        // flex-direction: row;
-        // gap: 3.5em;
-
         span{
             margin-top: 1.5em;
         }

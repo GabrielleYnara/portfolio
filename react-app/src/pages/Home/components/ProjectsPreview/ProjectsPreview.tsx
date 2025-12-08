@@ -6,14 +6,16 @@ import "./ProjectsPreview.scss"
 
 function ProjectsPreview(){
     return <section className="projects-preview">
-        <h1>Projects</h1>
-        <p>
-            Check out some of my projects.
-        </p>
-        <div id="projects-preview-cards">
-            <ProjectHighlight/>
-            <ProjectHighlight/>                
-            <NavLink to="/Projects" className="accent">See more projects</NavLink>
+        <div className="inner-content">
+            <h1>Projects</h1>
+            <p>
+                Check out some of my projects.
+            </p>
+            <div id="projects-preview-cards">
+                <ProjectHighlight/>
+                <ProjectHighlight/>                
+                <NavLink to="/Projects" className="accent">See more projects</NavLink>
+            </div>
         </div>
     </section>;
 }
