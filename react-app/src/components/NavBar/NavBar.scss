@@ -37,7 +37,8 @@ nav::after {
     height: 1.5px;
     bottom: 0;
     background: $golden_line;
-    box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+    // box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 16px 1px #000000;
     overflow: hidden;
 }
 
