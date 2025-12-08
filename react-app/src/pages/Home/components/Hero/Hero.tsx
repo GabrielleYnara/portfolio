@@ -12,7 +12,7 @@ function Hero() {
     return <section className="hero">
         <div className="inner-content">
             <div className="config">
-                <a href="#" id="language" class="accent">Português</a>
+                <a href="#" id="language" className="accent">Português</a>
                 <a href="#">
                     <img src={moon}/>
                 </a>
