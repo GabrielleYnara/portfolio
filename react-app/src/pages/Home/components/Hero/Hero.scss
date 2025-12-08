@@ -3,6 +3,37 @@
 
 .hero {
     @extend %background-gradient-left;
+
+    #mystic-cards {
+        position: absolute;
+        width: 3.5em;
+        top: 5.5em;
+        left: 0.5em;
+    }
+    #puzzle-pieces {
+        position: absolute;
+        width: 2.5em;
+        right: 5em;
+        top: 2.5em;
+    }
+    #sparkle {
+        position: absolute;
+        width: 3em;
+        top: 6.5em;
+        right: 0.5em;
+    }
+    #constellation {
+        position: absolute;
+        width: 6em;
+        bottom: 0;
+        left: 1.5em;
+    }
+    #eye {
+        position: absolute;
+        width: 3.5em;
+        bottom: 5em;
+        right: 1.5em;
+    }
 }
 .hero > .inner-content {
     text-align: center;
@@ -12,6 +43,7 @@
     justify-content: center;
     padding-left: 2em;
     padding-right: 2em;
+
     img{
         width: 13em;
         margin: 20px auto;
@@ -19,6 +51,19 @@
 
     h2 {
         font-size: 1.3rem;
+    }
+    
+    .config {
+        position: absolute;
+        top: 0.5em;
+        left: 1.5em;
+        font-size: small;
+
+        img {
+            width: 18px;
+            margin-left: 2em;
+            margin-top: 1em;
+        }
     }
 }
 
