@@ -4,14 +4,12 @@ import ProjectsPreview from "./components/ProjectsPreview/ProjectsPreview";
 import CTA from "../../components/CallToAction/CallToAction"
 
 function Home() {
-    return (
-        <div>
-            <Hero/>
-            <Intro/>
-            <ProjectsPreview/>
-            <CTA/>
-        </div>
-    );
+    return <div>
+        <Hero/>
+        <Intro/>
+        <ProjectsPreview/>
+        <CTA/>
+    </div>;
 }
 
 export default Home;

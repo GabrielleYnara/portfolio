@@ -20,7 +20,7 @@ function Footer() {
             </div>
             <p>built by Gabrielle Ynara</p>
         </div>
-    </footer>
+    </footer>;
 }
 
 export default Footer;

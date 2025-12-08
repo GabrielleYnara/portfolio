@@ -11,21 +11,19 @@ import Footer from "./components/Footer/Footer";
 import "./App.scss";
 
 function App() {
-    return (
-        <BrowserRouter>
-            <NavBar />
-            <main className="main-content">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/Projects" element={<Projects />} />
-                    <Route path="/Projects/ProjectDetails" element={<ProjectDetails />} />
-                    <Route path="/Resume" element={<Resume />} />
-                    <Route path="/Contact" element={<Contact />} />
-                </Routes>
-            </main>
-            <Footer/>
-        </BrowserRouter>
-    )
+    return <BrowserRouter>
+        <NavBar />
+        <main className="main-content">
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/Projects" element={<Projects />} />
+                <Route path="/Projects/ProjectDetails" element={<ProjectDetails />} />
+                <Route path="/Resume" element={<Resume />} />
+                <Route path="/Contact" element={<Contact />} />
+            </Routes>
+        </main>
+        <Footer/>
+    </BrowserRouter>;
 }
 
 export default App;

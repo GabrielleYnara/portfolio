@@ -16,7 +16,7 @@ function ProjectHighlight(){
             </div>
             
         </div>
-    </div>
+    </div>;
 }
 
 export default ProjectHighlight;
