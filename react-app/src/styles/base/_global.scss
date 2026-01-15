@@ -7,6 +7,9 @@ body {
 nav { // nav and 
     padding: 20px;
 }
+main { // to avoid horizontal scroll bar
+    overflow: hidden;
+}
 
 /* Removes standard button characteristics */
 button {
@@ -20,7 +23,7 @@ button {
 }
 
 @media (min-width: $breakpoint_large) {
-    main, .content, .inner-content{
+    main, .content, .inner-content {
         max-width: $breakpoint_large;
         margin: 0px auto;
     }

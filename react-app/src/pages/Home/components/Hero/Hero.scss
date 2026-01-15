@@ -2,8 +2,6 @@
 @use "../../../../styles/abstracts/decorations" as *;
 
 .hero {
-    
-
     #puzzle-pieces {
         position: absolute;
         width: 2.5em;
@@ -97,8 +95,7 @@
         radial-gradient(circle at 88% 91%, rgba(204, 143, 63, 0.8) 1.3px, transparent 0),
         radial-gradient(circle at 78% 95%, rgba(204, 143, 63, 0.9) 1px, transparent 0),
         radial-gradient(circle at 97% 98%, rgba(204, 143, 63, 0.9) 1px, transparent 0)
-        ;
-
+    ;
     background-repeat: no-repeat;
     text-align: center;
     height: calc(100svh - $navbar_height); // screen size - navbar's height

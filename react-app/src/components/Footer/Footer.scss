@@ -30,7 +30,7 @@ footer {
         font-size: 0.8rem;
         color: #A49EA9;
     }
-    .content > div + p::before {
+    .content > div + p::before { // adds line above the creator info
         content: "";
         position: absolute;
         left: 50%;
