@@ -2,40 +2,104 @@
 @use "../../../../styles/abstracts/decorations" as *;
 
 .hero {
-    @extend %background-gradient-left;
+    
 
-    #mystic-cards {
-        position: absolute;
-        width: 3.5em;
-        top: 5.5em;
-        left: 0.5em;
-    }
     #puzzle-pieces {
         position: absolute;
         width: 2.5em;
-        right: 5em;
+        right: 2em;
         top: 2.5em;
     }
     #sparkle {
         position: absolute;
         width: 3em;
         top: 6.5em;
-        right: 0.5em;
+        left: 1.5em;
+    }
+    #arrow {
+        position: absolute;
+        width: 2em;
+        right: 5.5em;
+        top: 11em;
     }
     #constellation {
         position: absolute;
         width: 6em;
-        bottom: 0;
+        bottom: 8em;
         left: 1.5em;
+        transform: perspective(400px) rotate3d(0, 0, 1, -15deg);
     }
     #eye {
         position: absolute;
-        width: 3.5em;
+        width: 3em;
         bottom: 5em;
-        right: 1.5em;
+        right: 3em;
     }
+    #mystic-cards {
+        position: absolute;
+        width: 3em;
+        bottom: 1em;
+        left: 8em;
+    }
+
+    
+
+    @extend %background-gradient-left;
 }
 .hero > .inner-content {
+    background-image: /* starry */
+        /* top left */
+        radial-gradient(circle at 6% 10%, rgba(204, 143, 63, 0.9) 1px, transparent 0),
+        radial-gradient(circle at 24% 28%, rgba(204, 143, 63, 0.8) 1.3px, transparent 0),
+        radial-gradient(circle at 29% 14%, rgba(204, 143, 63, 0.9) 1px, transparent 0),
+        radial-gradient(circle at 38% 31%, rgba(204, 143, 63, 0.9) 1px, transparent 0),
+        radial-gradient(circle at 44% 19%, rgba(204, 143, 63, 0.9) 1px, transparent 0),  
+        radial-gradient(circle at 5% 29%, rgba(204, 143, 63, 0.9) 1px, transparent 0), 
+        radial-gradient(circle at 15% 35%, rgba(204, 143, 63, 0.9) 1px, transparent 0), 
+        radial-gradient(circle at 4% 43%, rgba(204, 143, 63, 0.9) 1px, transparent 0), 
+        radial-gradient(circle at 8% 53%, rgba(204, 143, 63, 0.9) 1px, transparent 0), 
+
+        /* top right */
+        radial-gradient(circle at 52% 7%, rgba(204, 143, 63, 0.9) 1px, transparent 0),        
+        radial-gradient(circle at 56% 26%, rgba(204, 143, 63, 0.9) 1px, transparent 0),
+        radial-gradient(circle at 62% 34%, rgba(204, 143, 63, 0.9) 1px, transparent 0),
+        radial-gradient(circle at 66% 15%, rgba(204, 143, 63, 0.8) 1.3px, transparent 0),       
+        radial-gradient(circle at 86% 3%, rgba(204, 143, 63, 0.9) 1px, transparent 0), 
+        radial-gradient(circle at 87% 39%, rgba(204, 143, 63, 0.8) 1px, transparent 0),
+        radial-gradient(circle at 96% 52%, rgba(204, 143, 63, 0.9) 1px, transparent 0),
+        radial-gradient(circle at 90% 63%, rgba(204, 143, 63, 0.9) 1px, transparent 0),
+        radial-gradient(circle at 95% 21%, rgba(204, 143, 63, 0.9) 1px, transparent 0),       
+        radial-gradient(circle at 82% 29%, rgba(204, 143, 63, 0.9) 1px, transparent 0),  
+
+        /* bottom left */
+        radial-gradient(circle at 6% 67%, rgba(204, 143, 63, 0.8) 1.3px, transparent 0), 
+        radial-gradient(circle at 36% 68%, rgba(204, 143, 63, 0.9) 1px, transparent 0), 
+        radial-gradient(circle at 47% 71%, rgba(204, 143, 63, 0.8) 1.3px, transparent 0), 
+        radial-gradient(circle at 31% 76%, rgba(204, 143, 63, 0.9) 1px, transparent 0), 
+        radial-gradient(circle at 4% 79%, rgba(204, 143, 63, 0.9) 1px, transparent 0), 
+        radial-gradient(circle at 32% 86%, rgba(204, 143, 63, 0.9) 1px, transparent 0), 
+        radial-gradient(circle at 17% 82%, rgba(204, 143, 63, 0.9) 1px, transparent 0), 
+        radial-gradient(circle at 22% 90%, rgba(204, 143, 63, 0.8) 1.3px, transparent 0), 
+        radial-gradient(circle at 7% 87%, rgba(204, 143, 63, 0.9) 1px, transparent 0), 
+        radial-gradient(circle at 4% 98%, rgba(204, 143, 63, 0.9) 1px, transparent 0), 
+        radial-gradient(circle at 15% 95%, rgba(204, 143, 63, 0.9) 1px, transparent 0), 
+        radial-gradient(circle at 32% 98.5%, rgba(204, 143, 63, 0.9) 1px, transparent 0), 
+        radial-gradient(circle at 52% 97%, rgba(204, 143, 63, 0.9) 1px, transparent 0), 
+
+        /* bottom right */
+        radial-gradient(circle at 68% 66%, rgba(204, 143, 63, 0.9) 1px, transparent 0),
+        radial-gradient(circle at 50% 81%, rgba(204, 143, 63, 0.9) 1px, transparent 0),
+        radial-gradient(circle at 57% 92%, rgba(204, 143, 63, 0.9) 1px, transparent 0),
+        radial-gradient(circle at 85% 73%, rgba(204, 143, 63, 0.9) 1px, transparent 0),
+        radial-gradient(circle at 94% 81%, rgba(204, 143, 63, 0.9) 1px, transparent 0),
+        radial-gradient(circle at 62% 76%, rgba(204, 143, 63, 0.9) 1px, transparent 0),
+        radial-gradient(circle at 67% 87%, rgba(204, 143, 63, 0.9) 1px, transparent 0),
+        radial-gradient(circle at 88% 91%, rgba(204, 143, 63, 0.8) 1.3px, transparent 0),
+        radial-gradient(circle at 78% 95%, rgba(204, 143, 63, 0.9) 1px, transparent 0),
+        radial-gradient(circle at 97% 98%, rgba(204, 143, 63, 0.9) 1px, transparent 0)
+        ;
+
+    background-repeat: no-repeat;
     text-align: center;
     height: calc(100svh - $navbar_height); // screen size - navbar's height
     display: flex;
@@ -44,9 +108,16 @@
     padding-left: 2em;
     padding-right: 2em;
 
-    img{
+    img { //targeting the images in the background
         width: 13em;
         margin: 20px auto;
+        opacity: calc(60%);
+    }
+    #logo {
+        opacity: calc(100%);
+    }
+    #moon {
+        opacity: calc(90%);
     }
 
     h2 {
@@ -67,11 +138,17 @@
     }
 }
 
-.hero::after { // draws a line after .hero
-    @extend %line-divider;
+.hero::after { 
+    @extend %line-divider; // draws a line after hero section
 }
 
-@media (min-width: $breakpoint_large) {
+/* ------------------------------ Styling for large screens ------------------------------ */
+@media (min-width: $breakpoint_medium) {
+    
+}
+
+/* ------------------------------ Styling for large screens ------------------------------ */
+@media (min-width: $breakpoint_large) { 
     .hero{
         img {
             width: 18em;
