@@ -3,14 +3,12 @@
 
 .intro { 
     @extend %background-gradient-right;
-}
-.intro::after { // draws a line after .intro
-    @extend %line-divider;
+    overflow: hidden;
 }
 
 .intro .inner-content {
     width: 90%;
-    padding: 5.5em 0.5em;
+    padding: 5.5em 0.5em 6.5em 0.5em;
     margin: 0 auto;
     text-align: center;
 
@@ -31,8 +29,81 @@
         display: flex;
         justify-self: end;
     }
+
+    #intro-puzzle {
+        position: absolute;
+        left: 8%;
+        top: 5.5%;
+        width: 46px;
+        opacity: 70%;
+    }
+    #intro-sparkle {
+        position: absolute;
+        opacity: 70%;
+        padding: 1.5em 2em;
+        display: flex;
+        justify-self: end;
+    }
 }
 
+.starry-field {
+    background-image: /* starry field */
+        /* top left */
+        radial-gradient(circle at 2% 3%, rgba(204, 143, 63, 0.8) 1px, transparent 0),
+        radial-gradient(circle at 34% 8%, rgba(204, 143, 63, 0.7) 1.3px, transparent 0),
+        radial-gradient(circle at 17% 13%, rgba(204, 143, 63, 0.8) 1px, transparent 0),
+        radial-gradient(circle at 38% 32%, rgba(204, 143, 63, 0.8) 1px, transparent 0),
+        radial-gradient(circle at 8% 23%, rgba(204, 143, 63, 0.7) 1.3px, transparent 0),  
+        radial-gradient(circle at 18% 34%, rgba(204, 143, 63, 0.8) 1px, transparent 0), 
+        radial-gradient(circle at 3% 43%, rgba(204, 143, 63, 0.8) 1px, transparent 0), 
+        radial-gradient(circle at 12% 55%, rgba(204, 143, 63, 0.8) 1px, transparent 0), 
+
+        /* top right */
+        radial-gradient(circle at 58% 5%, rgba(204, 143, 63, 0.8) 1px, transparent 0),        
+        radial-gradient(circle at 64% 34%, rgba(204, 143, 63, 0.8) 1px, transparent 0),
+        radial-gradient(circle at 76% 12%, rgba(204, 143, 63, 0.7) 1.3px, transparent 0),       
+        radial-gradient(circle at 91% 3%, rgba(204, 143, 63, 0.8) 1px, transparent 0), 
+        radial-gradient(circle at 90% 31%, rgba(204, 143, 63, 0.8) 1px, transparent 0),
+        radial-gradient(circle at 94% 48%, rgba(204, 143, 63, 0.8) 1px, transparent 0),
+        radial-gradient(circle at 96% 64%, rgba(204, 143, 63, 0.8) 1px, transparent 0),
+        radial-gradient(circle at 95% 19%, rgba(204, 143, 63, 0.8) 1px, transparent 0),       
+        radial-gradient(circle at 82% 52%, rgba(204, 143, 63, 0.8) 1px, transparent 0),  
+
+        /* bottom left */
+        radial-gradient(circle at 5% 67%, rgba(204, 143, 63, 0.7) 1.3px, transparent 0), 
+        radial-gradient(circle at 47% 91%, rgba(204, 143, 63, 0.7) 1.3px, transparent 0), 
+        radial-gradient(circle at 30% 77%, rgba(204, 143, 63, 0.8) 1px, transparent 0), 
+        radial-gradient(circle at 4% 79%, rgba(204, 143, 63, 0.8) 1px, transparent 0), 
+        radial-gradient(circle at 32% 87%, rgba(204, 143, 63, 0.8) 1px, transparent 0), 
+        radial-gradient(circle at 16% 83%, rgba(204, 143, 63, 0.8) 1px, transparent 0), 
+        radial-gradient(circle at 7% 91%, rgba(204, 143, 63, 0.8) 1px, transparent 0), 
+        radial-gradient(circle at 2% 99%, rgba(204, 143, 63, 0.8) 1px, transparent 0), 
+        radial-gradient(circle at 21% 95%, rgba(204, 143, 63, 0.8) 1px, transparent 0), 
+        radial-gradient(circle at 37% 98.5%, rgba(204, 143, 63, 0.8) 1px, transparent 0), 
+
+        /* bottom right */
+        radial-gradient(circle at 75% 79%, rgba(204, 143, 63, 0.8) 1px, transparent 0),
+        radial-gradient(circle at 51% 83%, rgba(204, 143, 63, 0.8) 1px, transparent 0),
+        radial-gradient(circle at 60% 95%, rgba(204, 143, 63, 0.7) 1.3px, transparent 0),
+        radial-gradient(circle at 94% 81%, rgba(204, 143, 63, 0.8) 1px, transparent 0),
+        radial-gradient(circle at 64% 76%, rgba(204, 143, 63, 0.8) 1px, transparent 0),
+        radial-gradient(circle at 67% 87%, rgba(204, 143, 63, 0.8) 1px, transparent 0),
+        radial-gradient(circle at 92% 90%, rgba(204, 143, 63, 0.7) 1px, transparent 0),
+        radial-gradient(circle at 80% 99%, rgba(204, 143, 63, 0.8) 1px, transparent 0),
+        radial-gradient(circle at 97% 98%, rgba(204, 143, 63, 0.8) 1px, transparent 0)
+    ;
+    background-repeat: no-repeat;
+    .summary {
+        background-color: #d9d9d90e;
+        padding: 20px 15px;
+        border-radius: 10px;
+    }
+
+}
+
+.intro::after { // draws a line after intro section
+    @extend %line-divider;
+}
 /* ------------------------------ Styling for medium screens ------------------------------ */
 @media (min-width: $breakpoint_medium) {
     .intro .inner-content {
