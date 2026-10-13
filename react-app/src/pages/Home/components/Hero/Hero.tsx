@@ -29,7 +29,7 @@ function Hero() {
             {/* <img src={} aria-hidden id=""/> */}
 
             <img src={logo} alt="Personal Logo" id="logo"/>
-            <h2>Software Developer specializing in Accessibility</h2>
+            <h2>Software Developement Engineer specializing in Accessibility</h2>
         </div>
         
     </section>;
