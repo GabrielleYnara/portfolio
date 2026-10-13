@@ -23,7 +23,7 @@ button {
 }
 
 @media (min-width: $breakpoint_large) {
-    main, .content, .inner-content {
+    .inner-content {
         max-width: $breakpoint_large;
         margin: 0px auto;
     }
