@@ -31,11 +31,9 @@ function Hero() {
             <img src={constellation} aria-hidden id="constellation"/>
             <img src={eye} aria-hidden id="eye"/>
             <img src={mysticCards} aria-hidden id="mystic-cards"/>
-            {/* <img src={} aria-hidden id=""/> */}
-            <div className="text-background">
-                <img src={logo} alt="Personal Logo" id="logo"/>
-                <h2>Software Developement Engineer specializing in Accessibility</h2>
-            </div>
+
+            <img src={logo} alt="Personal Logo" id="logo"/>
+            <h2>Software Developement Engineer specializing in Accessibility</h2>
         </div>
         
     </section>;
