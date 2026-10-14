@@ -11,6 +11,11 @@ import "./Hero.scss"
 
 function Hero() {
     return <section className="hero">
+        <div className="dots" aria-hidden>
+            {Array.from({length:53}, (_, i) => (
+                <span key={i}></span>
+            ))}
+        </div>
         <div className="inner-content">
 
             <div className="config">
@@ -27,9 +32,10 @@ function Hero() {
             <img src={eye} aria-hidden id="eye"/>
             <img src={mysticCards} aria-hidden id="mystic-cards"/>
             {/* <img src={} aria-hidden id=""/> */}
-
-            <img src={logo} alt="Personal Logo" id="logo"/>
-            <h2>Software Developement Engineer specializing in Accessibility</h2>
+            <div className="text-background">
+                <img src={logo} alt="Personal Logo" id="logo"/>
+                <h2>Software Developement Engineer specializing in Accessibility</h2>
+            </div>
         </div>
         
     </section>;

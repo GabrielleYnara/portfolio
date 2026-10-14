@@ -26,5 +26,7 @@ button {
     .inner-content {
         max-width: $breakpoint_large;
         margin: 0px auto;
+        z-index: 1;
+        position: relative;
     }
 }
