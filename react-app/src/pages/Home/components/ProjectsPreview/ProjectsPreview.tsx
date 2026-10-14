@@ -5,7 +5,7 @@ import ProjectHighlight from "../../../../components/ProjectHighlight/ProjectHig
 import "./ProjectsPreview.scss"
 
 function ProjectsPreview(){
-    return <section className="projects-preview">
+    return <section className="projects-preview" hidden>
         <div className="inner-content">
             <h1>Projects</h1>
             <p>
