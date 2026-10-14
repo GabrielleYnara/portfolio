@@ -4,6 +4,11 @@ import "./CallToAction.scss";
 
 function CallToAction({isHomePage}) {
     return <section className={isHomePage ? "home cta" : "cta"} >
+        <div className="dots" aria-hidden>
+            {Array.from({length:53}, (_, i) => (
+                <span key={i}></span>
+            ))}
+        </div>
         <div className="inner-content">
            <h1>Do you need a Software Developer?</h1>
             <p>If you're looking for a software developer who likes to get things done, let's talk.</p>
