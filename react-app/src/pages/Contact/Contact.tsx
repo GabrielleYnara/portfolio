@@ -11,7 +11,7 @@ import Button from "../../components/Button/Button";
 function Contact() {
     return <div className="contact">
         <div className="dots" aria-hidden>
-            {Array.from({length:53}, (_, i) => (
+            {Array.from({length:75}, (_, i) => (
                 <span key={i}></span>
             ))}
         </div>

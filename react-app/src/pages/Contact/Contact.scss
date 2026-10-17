@@ -17,7 +17,7 @@
     }
 
     // randomize the position, size, and opacity of the dots
-    @for $i from 1 through 53 {
+    @for $i from 1 through 75 {
         $top: math.random(98) * 1%;
         $left: math.random(98) * 1%;
         $side: math.random(4);
