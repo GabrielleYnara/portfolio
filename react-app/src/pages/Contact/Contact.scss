@@ -1,0 +1,62 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/decorations" as *;
+@use "sass:math";
+
+.contact{
+    .dots{
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 0;
+        span {
+            position: absolute;
+            background-color: rgb(204, 143, 63);
+            border-radius: 50%;
+          }
+    }
+
+    // randomize the position, size, and opacity of the dots
+    @for $i from 1 through 53 {
+        $top: math.random(98) * 1%;
+        $left: math.random(98) * 1%;
+        $side: math.random(4);
+        $distance: math.div(math.random(50) * math.random(50), 50) * 1%;
+
+        @if $side == 1 {
+            $top: $distance;
+        }
+        @else if $side == 2 {
+            $top: 100% - $distance;
+        }
+        @else if $side == 3 {
+            $left: $distance;
+        }
+        @else {
+            $left: 100% - $distance;
+        }
+
+        $size: math.random(2) + 0.3;
+        $opacity: math.div(math.random(61) + 19, 100);
+        span:nth-child(#{$i}) {
+            top: $top;
+            left: $left;
+            width: $size * 1px;
+            height: $size * 1px;
+            opacity: $opacity;
+        }
+        
+    }
+
+    @extend %background-gradient-left;
+}
+
+.contact > .inner-content {
+    height: calc(100svh - $navbar_height); // screen size - navbar's height
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
