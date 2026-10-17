@@ -1,3 +1,6 @@
+import OutlinedSparkle from "../../assets/img/outlined-sparkle.svg";
+import Eye from "../../assets/img/eye.svg";
+
 import Button from "../Button/Button"
 
 import "./CallToAction.scss";
@@ -15,6 +18,9 @@ function CallToAction({isHomePage}) {
             <p className="email accent-text"><strong>gabrielleynara@ymail.com</strong></p>
             <Button button={{title: "Send me a message", class: "golden-button", destination: "/Contact"}}/>
         </div>
+        <img src={OutlinedSparkle} aria-hidden id="cta-outlined-sparkle"/>
+        <img src={OutlinedSparkle} aria-hidden id="cta-outlined-sparkle2"/>
+        <img src={Eye} aria-hidden id="cta-eye"/>
     </section>;
 }
 

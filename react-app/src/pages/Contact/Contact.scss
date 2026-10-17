@@ -48,44 +48,6 @@
         
     }
 
-    @extend %background-gradient-left;
-}
-
-.contact > .inner-content {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    padding-top: 5em;
-    padding-left: 2em;
-    padding-right: 2em;
-    h2 {
-        font-size: 30px;
-        margin-bottom: 1em;
-    }
-    p{
-        text-align: left;
-    }
-    #sparkle2{
-        width: 3.3em;
-        align-self: end;
-        opacity: 75%;
-        margin-bottom: 2em;
-    }
-    form {
-        height: calc(100svh - $navbar_height); // screen size - navbar's height
-        h1 {
-            text-align: center;
-        }
-        .inner-form {
-            text-align: left;
-        }
-        #message {
-            margin-bottom: 3.2rem;
-        }
-        label:not(label:first-of-type) {
-            margin-top: 1em;
-        }
-    }
     #sparkle3, #outlined-sparkle {
         position: absolute;
         width: 1em;
@@ -102,8 +64,55 @@
     #constellation {
         position: absolute;
         width: 5em;
-        bottom: 3em;
+        bottom: 2em;
         right: 2em;
         opacity: 85%;
+    }
+
+    .inner-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding-top: 5em;
+        padding-left: 2em;
+        padding-right: 2em;
+        h2 {
+            font-size: 30px;
+            margin-bottom: 1em;
+        }
+        p{
+            text-align: left;
+        }
+        #sparkle2{
+            width: 3.3em;
+            align-self: end;
+            opacity: 75%;
+            margin-bottom: 2em;
+        }
+        form {
+            height: calc(100svh - $navbar_height); // screen size - navbar's height
+            h1 {
+                text-align: center;
+            }
+            .inner-form {
+                text-align: left;
+            }
+            #message {
+                margin-bottom: 3.2rem;
+            }
+            label:not(label:first-of-type) {
+                margin-top: 1em;
+            }
+        }
+    }
+    
+    @extend %background-gradient-left;
+}
+
+/* ------------------------------ Styling for medium screens ------------------------------ */
+@media (min-width: $breakpoint_medium) {
+    .contact .inner-content {
+        width: 30em;
+        margin: 0 auto;
     }
 }

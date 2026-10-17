@@ -40,6 +40,9 @@
         bottom: 1em;
         left: 45%;
     }
+    img{
+        opacity: 80%;
+    }
 
     .dots{
         position: absolute;
@@ -99,12 +102,9 @@
     padding-left: 2em;
     padding-right: 2em;
 
-    img { //targeting the images in the background
+    #logo {
         width: 13em;
         margin: 20px auto;
-        opacity: calc(60%);
-    }
-    #logo {
         opacity: calc(100%);
     }
 
@@ -119,7 +119,7 @@
 
 /* ------------------------------ Styling for medium screens ------------------------------ */
 @media (min-width: $breakpoint_medium) {
-    
+
 }
 
 /* ------------------------------ Styling for large screens ------------------------------ */

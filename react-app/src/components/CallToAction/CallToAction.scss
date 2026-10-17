@@ -17,6 +17,30 @@
           }
     }
 
+    img {
+        position: relative;
+        opacity: 85%;
+    }
+
+    #cta-outlined-sparkle {
+        bottom: 5.5em;
+        left: 2em;
+    }
+    #cta-outlined-sparkle2{
+        width: 18px;
+        bottom: 4.5em;
+        left: 2.2em;
+    }
+
+    #cta-eye{
+        position: absolute;
+        width: 2.3em;
+        transform: rotate(-90deg);
+        bottom: 2em;
+        opacity: 75%;
+        right: 2em;
+    }
+
     // randomize the position, size, and opacity of the dots
     @for $i from 1 through 63 {
         $top: math.random(98) * 1%;
@@ -70,9 +94,29 @@
     .cta > .inner-content {
         
         text-align: left;
-
+        padding-left: 7rem;
+        padding-right: 7rem;
         p {
             padding: 0.4rem 0;
         }
+    }
+    .home.cta #cta-eye{
+        right: 4em;
+    }
+}
+
+
+/* ------------------------------ Styling for larg screens ------------------------------ */
+@media (min-width: $breakpoint_large) {
+
+    #cta-outlined-sparkle {
+        left: 4em;
+    }
+    #cta-outlined-sparkle2{
+        left: 4.2em;
+    }
+
+    #cta-eye{
+        right: 2em;
     }
 }

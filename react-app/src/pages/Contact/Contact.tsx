@@ -15,11 +15,12 @@ function Contact() {
                 <span key={i}></span>
             ))}
         </div>
+        <PageConfig/>
         <div className="inner-content">
-            <PageConfig/>
+            
             <h2>Got a project in mind?</h2>
             <p>Use the form to give me as much detail as possible and I'll get back to you as soon as I can.</p>
-            <p>Alternatively, get in touch using the email below</p>
+            <p>Alternatively, get in touch emailing me directly using the email below</p>
             <p className="accent-text">gabrielleynara@ymail.com</p>
             <img src={sparkle2} aria-hidden id="sparkle2"/>
             <form>
@@ -43,10 +44,11 @@ function Contact() {
                 </div>
                 <Button button={{title: "Send message", class: "golden-button", destination: ""}}/>
             </form>
-            <img src={sparkle3} aria-hidden id="sparkle3"/>
+            
+        </div>
+        <img src={sparkle3} aria-hidden id="sparkle3"/>
             <img src={outlinedSparkle} aria-hidden id="outlined-sparkle"/>
             <img src={constellation} aria-hidden id="constellation"/>
-        </div>
     </div>;
 }
 
