@@ -5,7 +5,7 @@ import "./CallToAction.scss";
 function CallToAction({isHomePage}) {
     return <section className={isHomePage ? "home cta" : "cta"} >
         <div className="dots" aria-hidden>
-            {Array.from({length:53}, (_, i) => (
+            {Array.from({length:63}, (_, i) => (
                 <span key={i}></span>
             ))}
         </div>
@@ -15,7 +15,7 @@ function CallToAction({isHomePage}) {
             <p className="email"><strong>gabrielleynara@ymail.com</strong></p>
             <Button button={{title: "Send me a message", class: "golden-button", destination: "/Contact"}}/>
         </div>
-            </section>;
+    </section>;
 }
 
 export default CallToAction;
