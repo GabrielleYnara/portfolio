@@ -46,8 +46,8 @@ function NavBar() {
 
             <div id="navigation-items">
                 <NavLink to="/" onClick={handleNavItemClick}>Home</NavLink>
-                <NavLink to="/Projects" onClick={handleNavItemClick}>Projects</NavLink>
-                <NavLink to="/Resume" onClick={handleNavItemClick}>Resume</NavLink>
+                <NavLink to="/Projects" onClick={handleNavItemClick} hidden>Projects</NavLink>
+                <NavLink to="/Resume" onClick={handleNavItemClick} hidden>Resume</NavLink>
                 <NavLink to="/Contact" onClick={handleNavItemClick}>Contact</NavLink>
                 <div id="external-links">
                     <a href="https://github.com/GabrielleYnara"  onClick={handleNavItemClick} target="_blank" aria-label="Opens GitHub profile in a new tab">GitHub</a>
