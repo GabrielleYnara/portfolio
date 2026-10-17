@@ -21,6 +21,9 @@ button {
     appearance: none;   
     cursor: pointer;
 }
+.accent-text{
+    color: $accentColor_darkTheme;
+}
 
 @media (min-width: $breakpoint_large) {
     .inner-content {
@@ -28,5 +31,7 @@ button {
         margin: 0px auto;
         z-index: 1;
         position: relative;
+
+        
     }
 }

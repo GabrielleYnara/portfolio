@@ -1,5 +1,6 @@
 @use "../../styles/abstracts/variables" as *;
 @use "../../styles/abstracts/decorations" as *;
+
 @use "sass:math";
 
 .home.cta {
@@ -60,7 +61,6 @@
     }
 
     .email {
-        color: $accentColor_darkTheme;
         margin-bottom: 2.3rem;
     }
 }
